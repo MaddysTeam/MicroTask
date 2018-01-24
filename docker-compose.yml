@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  microtask.project:
+    image: microtask.project
+    build:
+      context: .
+      dockerfile: MicroTask.Project\Dockerfile
+
+  microtask.task:
+    image: microtask.task
+    build:
+      context: .
+      dockerfile: ..\MicroTask.Task\Dockerfile
+
+
+  microtask.workjournal:
+    image: microtask.workjournal
+    build:
+      context: .
+      dockerfile: MicroTask.WorkJournal\Dockerfile
+

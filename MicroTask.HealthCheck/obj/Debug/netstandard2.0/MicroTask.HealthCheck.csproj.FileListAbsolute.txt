@@ -1,0 +1,9 @@
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.HealthCheck\bin\Debug\netstandard2.0\MicroTask.HealthCheck.deps.json
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.HealthCheck\bin\Debug\netstandard2.0\MicroTask.HealthCheck.dll
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.HealthCheck\obj\Debug\netstandard2.0\MicroTask.HealthCheck.csprojResolveAssemblyReference.cache
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.HealthCheck\obj\Debug\netstandard2.0\MicroTask.HealthCheck.csproj.CoreCompileInputs.cache
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.HealthCheck\obj\Debug\netstandard2.0\MicroTask.HealthCheck.AssemblyInfoInputs.cache
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.HealthCheck\obj\Debug\netstandard2.0\MicroTask.HealthCheck.AssemblyInfo.cs
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.HealthCheck\bin\Debug\netstandard2.0\MicroTask.HealthCheck.pdb
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.HealthCheck\obj\Debug\netstandard2.0\MicroTask.HealthCheck.dll
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.HealthCheck\obj\Debug\netstandard2.0\MicroTask.HealthCheck.pdb

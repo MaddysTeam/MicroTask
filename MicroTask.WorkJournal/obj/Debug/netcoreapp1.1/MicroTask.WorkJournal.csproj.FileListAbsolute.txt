@@ -1,0 +1,11 @@
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.WorkJournal\bin\Debug\netcoreapp1.1\MicroTask.WorkJournal.deps.json
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.WorkJournal\bin\Debug\netcoreapp1.1\MicroTask.WorkJournal.runtimeconfig.json
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.WorkJournal\bin\Debug\netcoreapp1.1\MicroTask.WorkJournal.runtimeconfig.dev.json
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.WorkJournal\bin\Debug\netcoreapp1.1\MicroTask.WorkJournal.dll
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.WorkJournal\bin\Debug\netcoreapp1.1\MicroTask.WorkJournal.pdb
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.WorkJournal\obj\Debug\netcoreapp1.1\MicroTask.WorkJournal.csprojResolveAssemblyReference.cache
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.WorkJournal\obj\Debug\netcoreapp1.1\MicroTask.WorkJournal.csproj.CoreCompileInputs.cache
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.WorkJournal\obj\Debug\netcoreapp1.1\MicroTask.WorkJournal.AssemblyInfoInputs.cache
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.WorkJournal\obj\Debug\netcoreapp1.1\MicroTask.WorkJournal.AssemblyInfo.cs
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.WorkJournal\obj\Debug\netcoreapp1.1\MicroTask.WorkJournal.dll
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.WorkJournal\obj\Debug\netcoreapp1.1\MicroTask.WorkJournal.pdb

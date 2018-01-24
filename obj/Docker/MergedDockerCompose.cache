@@ -1,0 +1,34 @@
+networks:
+  default:
+    external:
+      name: nat
+services:
+  microtask.project:
+    build:
+      context: C:\project\micro_service\MicroTask\MicroTask
+      dockerfile: MicroTask.Project\Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: microtask.project
+    ports:
+    - '80'
+  microtask.task:
+    build:
+      context: C:\project\micro_service\MicroTask\MicroTask
+      dockerfile: ..\MicroTask.Task\Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: microtask.task
+    ports:
+    - '80'
+  microtask.workjournal:
+    build:
+      context: C:\project\micro_service\MicroTask\MicroTask
+      dockerfile: MicroTask.WorkJournal\Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: microtask.workjournal
+    ports:
+    - '80'
+version: '3.0'
+volumes: {}

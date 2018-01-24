@@ -1,0 +1,11 @@
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.Project\bin\Debug\netcoreapp2.0\MicroTask.Project.deps.json
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.Project\bin\Debug\netcoreapp2.0\MicroTask.Project.runtimeconfig.json
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.Project\bin\Debug\netcoreapp2.0\MicroTask.Project.runtimeconfig.dev.json
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.Project\bin\Debug\netcoreapp2.0\MicroTask.Project.dll
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.Project\bin\Debug\netcoreapp2.0\MicroTask.Project.pdb
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.Project\obj\Debug\netcoreapp2.0\MicroTask.Project.csprojResolveAssemblyReference.cache
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.Project\obj\Debug\netcoreapp2.0\MicroTask.Project.csproj.CoreCompileInputs.cache
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.Project\obj\Debug\netcoreapp2.0\MicroTask.Project.AssemblyInfoInputs.cache
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.Project\obj\Debug\netcoreapp2.0\MicroTask.Project.AssemblyInfo.cs
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.Project\obj\Debug\netcoreapp2.0\MicroTask.Project.dll
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.Project\obj\Debug\netcoreapp2.0\MicroTask.Project.pdb

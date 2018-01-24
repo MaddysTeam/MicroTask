@@ -1,0 +1,4 @@
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.Project\obj\Debug\netcoreapp1.1\MicroTask.Project.csprojResolveAssemblyReference.cache
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.Project\obj\Debug\netcoreapp1.1\MicroTask.Project.csproj.CoreCompileInputs.cache
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.Project\obj\Debug\netcoreapp1.1\MicroTask.Project.AssemblyInfoInputs.cache
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.Project\obj\Debug\netcoreapp1.1\MicroTask.Project.AssemblyInfo.cs

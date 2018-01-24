@@ -1,0 +1,11 @@
+C:\project\micro_service\MicroTask\MicroTask.IdentityAuthServer\bin\Debug\netcoreapp2.0\MicroTask.IdentityAuthServer.deps.json
+C:\project\micro_service\MicroTask\MicroTask.IdentityAuthServer\bin\Debug\netcoreapp2.0\MicroTask.IdentityAuthServer.runtimeconfig.json
+C:\project\micro_service\MicroTask\MicroTask.IdentityAuthServer\bin\Debug\netcoreapp2.0\MicroTask.IdentityAuthServer.runtimeconfig.dev.json
+C:\project\micro_service\MicroTask\MicroTask.IdentityAuthServer\bin\Debug\netcoreapp2.0\MicroTask.IdentityAuthServer.dll
+C:\project\micro_service\MicroTask\MicroTask.IdentityAuthServer\obj\Debug\netcoreapp2.0\MicroTask.IdentityAuthServer.csprojResolveAssemblyReference.cache
+C:\project\micro_service\MicroTask\MicroTask.IdentityAuthServer\obj\Debug\netcoreapp2.0\MicroTask.IdentityAuthServer.csproj.CoreCompileInputs.cache
+C:\project\micro_service\MicroTask\MicroTask.IdentityAuthServer\obj\Debug\netcoreapp2.0\MicroTask.IdentityAuthServer.AssemblyInfoInputs.cache
+C:\project\micro_service\MicroTask\MicroTask.IdentityAuthServer\obj\Debug\netcoreapp2.0\MicroTask.IdentityAuthServer.AssemblyInfo.cs
+C:\project\micro_service\MicroTask\MicroTask.IdentityAuthServer\bin\Debug\netcoreapp2.0\MicroTask.IdentityAuthServer.pdb
+C:\project\micro_service\MicroTask\MicroTask.IdentityAuthServer\obj\Debug\netcoreapp2.0\MicroTask.IdentityAuthServer.dll
+C:\project\micro_service\MicroTask\MicroTask.IdentityAuthServer\obj\Debug\netcoreapp2.0\MicroTask.IdentityAuthServer.pdb

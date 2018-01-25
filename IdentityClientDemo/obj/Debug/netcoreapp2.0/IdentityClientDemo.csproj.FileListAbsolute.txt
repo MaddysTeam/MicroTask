@@ -1,0 +1,11 @@
+C:\project\micro_service\MicroTask\MicroTask\IdentityClientDemo\bin\Debug\netcoreapp2.0\IdentityClientDemo.deps.json
+C:\project\micro_service\MicroTask\MicroTask\IdentityClientDemo\bin\Debug\netcoreapp2.0\IdentityClientDemo.runtimeconfig.json
+C:\project\micro_service\MicroTask\MicroTask\IdentityClientDemo\bin\Debug\netcoreapp2.0\IdentityClientDemo.runtimeconfig.dev.json
+C:\project\micro_service\MicroTask\MicroTask\IdentityClientDemo\bin\Debug\netcoreapp2.0\IdentityClientDemo.dll
+C:\project\micro_service\MicroTask\MicroTask\IdentityClientDemo\bin\Debug\netcoreapp2.0\IdentityClientDemo.pdb
+C:\project\micro_service\MicroTask\MicroTask\IdentityClientDemo\obj\Debug\netcoreapp2.0\IdentityClientDemo.csproj.CoreCompileInputs.cache
+C:\project\micro_service\MicroTask\MicroTask\IdentityClientDemo\obj\Debug\netcoreapp2.0\IdentityClientDemo.AssemblyInfoInputs.cache
+C:\project\micro_service\MicroTask\MicroTask\IdentityClientDemo\obj\Debug\netcoreapp2.0\IdentityClientDemo.AssemblyInfo.cs
+C:\project\micro_service\MicroTask\MicroTask\IdentityClientDemo\obj\Debug\netcoreapp2.0\IdentityClientDemo.dll
+C:\project\micro_service\MicroTask\MicroTask\IdentityClientDemo\obj\Debug\netcoreapp2.0\IdentityClientDemo.pdb
+C:\project\micro_service\MicroTask\MicroTask\IdentityClientDemo\obj\Debug\netcoreapp2.0\IdentityClientDemo.csprojResolveAssemblyReference.cache

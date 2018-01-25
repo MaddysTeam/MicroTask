@@ -21,6 +21,15 @@ services:
     image: microtask.task
     ports:
     - '80'
+  microtask.users:
+    build:
+      context: C:\project\micro_service\MicroTask\MicroTask
+      dockerfile: ..\MicroTask.Users\Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: microtask.users
+    ports:
+    - '80'
   microtask.workjournal:
     build:
       context: C:\project\micro_service\MicroTask\MicroTask

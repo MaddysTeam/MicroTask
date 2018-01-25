@@ -4,3 +4,6 @@ C:\project\micro_service\MicroTask\MicroTask\MicroTask.Gateway\obj\Debug\netcore
 C:\project\micro_service\MicroTask\MicroTask\MicroTask.Gateway\obj\Debug\netcoreapp2.0\MicroTask.Gateway.csproj.CoreCompileInputs.cache
 C:\project\micro_service\MicroTask\MicroTask\MicroTask.Gateway\obj\Debug\netcoreapp2.0\MicroTask.Gateway.AssemblyInfoInputs.cache
 C:\project\micro_service\MicroTask\MicroTask\MicroTask.Gateway\obj\Debug\netcoreapp2.0\MicroTask.Gateway.AssemblyInfo.cs
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.Gateway\bin\Debug\netcoreapp2.0\MicroTask.Gateway.pdb
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.Gateway\obj\Debug\netcoreapp2.0\MicroTask.Gateway.dll
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.Gateway\obj\Debug\netcoreapp2.0\MicroTask.Gateway.pdb

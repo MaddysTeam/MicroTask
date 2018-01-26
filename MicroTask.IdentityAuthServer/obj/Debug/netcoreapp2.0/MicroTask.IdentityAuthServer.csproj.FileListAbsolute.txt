@@ -20,3 +20,14 @@ C:\project\micro_service\MicroTask\MicroTask\MicroTask.IdentityAuthServer\obj\De
 C:\project\micro_service\MicroTask\MicroTask\MicroTask.IdentityAuthServer\obj\Debug\netcoreapp2.0\MicroTask.IdentityAuthServer.csproj.CoreCompileInputs.cache
 C:\project\micro_service\MicroTask\MicroTask\MicroTask.IdentityAuthServer\obj\Debug\netcoreapp2.0\MicroTask.IdentityAuthServer.AssemblyInfoInputs.cache
 C:\project\micro_service\MicroTask\MicroTask\MicroTask.IdentityAuthServer\obj\Debug\netcoreapp2.0\MicroTask.IdentityAuthServer.AssemblyInfo.cs
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.IdentityAuthServer\bin\Debug\netcoreapp2.0\MicroTask.IdentityAuthServer.deps.json
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.IdentityAuthServer\bin\Debug\netcoreapp2.0\MicroTask.IdentityAuthServer.runtimeconfig.json
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.IdentityAuthServer\bin\Debug\netcoreapp2.0\MicroTask.IdentityAuthServer.runtimeconfig.dev.json
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.IdentityAuthServer\bin\Debug\netcoreapp2.0\MicroTask.IdentityAuthServer.dll
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.IdentityAuthServer\bin\Debug\netcoreapp2.0\MicroTask.IdentityAuthServer.pdb
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.IdentityAuthServer\obj\Debug\netcoreapp2.0\MicroTask.IdentityAuthServer.csprojResolveAssemblyReference.cache
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.IdentityAuthServer\obj\Debug\netcoreapp2.0\MicroTask.IdentityAuthServer.csproj.CoreCompileInputs.cache
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.IdentityAuthServer\obj\Debug\netcoreapp2.0\MicroTask.IdentityAuthServer.AssemblyInfoInputs.cache
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.IdentityAuthServer\obj\Debug\netcoreapp2.0\MicroTask.IdentityAuthServer.AssemblyInfo.cs
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.IdentityAuthServer\obj\Debug\netcoreapp2.0\MicroTask.IdentityAuthServer.dll
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.IdentityAuthServer\obj\Debug\netcoreapp2.0\MicroTask.IdentityAuthServer.pdb

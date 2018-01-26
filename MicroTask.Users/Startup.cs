@@ -27,6 +27,7 @@ namespace MicroTask.Users
                     .AddAuthorization()
                     .AddJsonFormatters();
 
+            // Following logic for initial and send auth request for authentication to server side when api intializing
             services.AddAuthentication("Bearer")
                     .AddIdentityServerAuthentication(options=> {
                         options.Authority = "http://localhost:9000";

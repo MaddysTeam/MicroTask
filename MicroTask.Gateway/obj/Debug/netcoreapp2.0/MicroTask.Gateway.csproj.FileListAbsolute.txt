@@ -7,3 +7,12 @@ C:\project\micro_service\MicroTask\MicroTask\MicroTask.Gateway\obj\Debug\netcore
 C:\project\micro_service\MicroTask\MicroTask\MicroTask.Gateway\bin\Debug\netcoreapp2.0\MicroTask.Gateway.pdb
 C:\project\micro_service\MicroTask\MicroTask\MicroTask.Gateway\obj\Debug\netcoreapp2.0\MicroTask.Gateway.dll
 C:\project\micro_service\MicroTask\MicroTask\MicroTask.Gateway\obj\Debug\netcoreapp2.0\MicroTask.Gateway.pdb
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Gateway\bin\Debug\netcoreapp2.0\MicroTask.Gateway.deps.json
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Gateway\bin\Debug\netcoreapp2.0\MicroTask.Gateway.dll
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Gateway\bin\Debug\netcoreapp2.0\MicroTask.Gateway.pdb
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Gateway\obj\Debug\netcoreapp2.0\MicroTask.Gateway.csprojResolveAssemblyReference.cache
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Gateway\obj\Debug\netcoreapp2.0\MicroTask.Gateway.csproj.CoreCompileInputs.cache
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Gateway\obj\Debug\netcoreapp2.0\MicroTask.Gateway.AssemblyInfoInputs.cache
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Gateway\obj\Debug\netcoreapp2.0\MicroTask.Gateway.AssemblyInfo.cs
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Gateway\obj\Debug\netcoreapp2.0\MicroTask.Gateway.dll
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Gateway\obj\Debug\netcoreapp2.0\MicroTask.Gateway.pdb

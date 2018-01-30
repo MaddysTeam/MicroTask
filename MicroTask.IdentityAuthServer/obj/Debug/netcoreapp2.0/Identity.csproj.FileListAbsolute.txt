@@ -1,0 +1,4 @@
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.IdentityAuthServer\obj\Debug\netcoreapp2.0\Identity.csprojResolveAssemblyReference.cache
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.IdentityAuthServer\obj\Debug\netcoreapp2.0\Identity.csproj.CoreCompileInputs.cache
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.IdentityAuthServer\obj\Debug\netcoreapp2.0\Identity.AssemblyInfoInputs.cache
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.IdentityAuthServer\obj\Debug\netcoreapp2.0\Identity.AssemblyInfo.cs

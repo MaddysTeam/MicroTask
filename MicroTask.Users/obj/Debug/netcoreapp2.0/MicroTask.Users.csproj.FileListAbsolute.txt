@@ -20,3 +20,14 @@ E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Users\obj\Deb
 E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Users\obj\Debug\netcoreapp2.0\MicroTask.Users.AssemblyInfo.cs
 E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Users\obj\Debug\netcoreapp2.0\MicroTask.Users.dll
 E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Users\obj\Debug\netcoreapp2.0\MicroTask.Users.pdb
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.Users\bin\Debug\netcoreapp2.0\MicroTask.Users.deps.json
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.Users\bin\Debug\netcoreapp2.0\MicroTask.Users.runtimeconfig.json
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.Users\bin\Debug\netcoreapp2.0\MicroTask.Users.runtimeconfig.dev.json
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.Users\bin\Debug\netcoreapp2.0\MicroTask.Users.dll
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.Users\bin\Debug\netcoreapp2.0\MicroTask.Users.pdb
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.Users\obj\Debug\netcoreapp2.0\MicroTask.Users.csprojResolveAssemblyReference.cache
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.Users\obj\Debug\netcoreapp2.0\MicroTask.Users.csproj.CoreCompileInputs.cache
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.Users\obj\Debug\netcoreapp2.0\MicroTask.Users.AssemblyInfoInputs.cache
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.Users\obj\Debug\netcoreapp2.0\MicroTask.Users.AssemblyInfo.cs
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.Users\obj\Debug\netcoreapp2.0\MicroTask.Users.dll
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.Users\obj\Debug\netcoreapp2.0\MicroTask.Users.pdb

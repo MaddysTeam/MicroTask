@@ -3,30 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
+using Business;
+using Business.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
 using Steeltoe.Discovery.Client;
 
 namespace MicroTask.Task.Controllers
 {
-    [Route("api/[controller]")]
-    public class ValuesController : Controller
+    [Route("Task/[controller]")]
+    public class TaskController : Controller
     {
-        private readonly DiscoveryHttpClientHandler _handler;
-        private const string WORK_JOURNAL_URLS = "http://WorkJournal/api/values";
-
-        public ValuesController(IDiscoveryClient client)
-        {
-            this._handler = new DiscoveryHttpClientHandler(client);
-
-        }
-
+      
         // GET api/values
-        [HttpGet("WorkJournal")]
-        public async Task<string> Get()
+        [HttpGet()]
+        public async Task<List<WorkTask>> Get()
         {
-            var client = new HttpClient(_handler,false);
-
-            return await client.GetStringAsync(WORK_JOURNAL_URLS);
+            return null;
         }
 
         // GET api/values/5

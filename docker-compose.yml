@@ -27,3 +27,24 @@ services:
       context: .
       dockerfile: ..\MicroTask.Users\Dockerfile
 
+
+  cache:
+    image: cache
+    build:
+      context: .
+      dockerfile: ..\Cache\Dockerfile
+
+
+  rediscache:
+    image: rediscache
+    build:
+      context: .
+      dockerfile: ..\RedisCache\Dockerfile
+
+
+  microtask.rediscache:
+    image: microtask.rediscache
+    build:
+      context: .
+      dockerfile: MicroTask.RedisCache\Dockerfile
+

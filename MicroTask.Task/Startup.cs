@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Business;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Steeltoe.Discovery.Client;
+using Steeltoe.Extensions.Configuration;
 
 namespace MicroTask.Task
 {
@@ -19,7 +21,8 @@ namespace MicroTask.Task
                 .SetBasePath(env.ContentRootPath)
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
-                .AddEnvironmentVariables();
+                .AddEnvironmentVariables()
+                .AddConfigServer(env);
             Configuration = builder.Build();
         }
 
@@ -29,8 +32,20 @@ namespace MicroTask.Task
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
-            services.AddMvc();
+            services.AddMvc(options=> {
+                   // add filter here
+
+            });
+
+            // Add Steeltoe.DiscoverClient.
             services.AddDiscoveryClient(this.Configuration);
+
+            // Add framework services.
+            services.AddMvc();
+
+            services.AddConfigServer(Configuration);
+
+            services.Configure<Demo>(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,6 +55,7 @@ namespace MicroTask.Task
             loggerFactory.AddDebug();
 
             app.UseMvc();
+
             app.UseDiscoveryClient();
         }
     }

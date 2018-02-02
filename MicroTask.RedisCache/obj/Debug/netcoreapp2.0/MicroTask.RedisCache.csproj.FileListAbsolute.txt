@@ -1,0 +1,11 @@
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.RedisCache\bin\Debug\netcoreapp2.0\MicroTask.RedisCache.deps.json
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.RedisCache\bin\Debug\netcoreapp2.0\MicroTask.RedisCache.runtimeconfig.json
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.RedisCache\bin\Debug\netcoreapp2.0\MicroTask.RedisCache.runtimeconfig.dev.json
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.RedisCache\bin\Debug\netcoreapp2.0\MicroTask.RedisCache.dll
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.RedisCache\bin\Debug\netcoreapp2.0\MicroTask.RedisCache.pdb
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.RedisCache\obj\Debug\netcoreapp2.0\MicroTask.RedisCache.csprojResolveAssemblyReference.cache
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.RedisCache\obj\Debug\netcoreapp2.0\MicroTask.RedisCache.csproj.CoreCompileInputs.cache
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.RedisCache\obj\Debug\netcoreapp2.0\MicroTask.RedisCache.AssemblyInfoInputs.cache
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.RedisCache\obj\Debug\netcoreapp2.0\MicroTask.RedisCache.AssemblyInfo.cs
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.RedisCache\obj\Debug\netcoreapp2.0\MicroTask.RedisCache.dll
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.RedisCache\obj\Debug\netcoreapp2.0\MicroTask.RedisCache.pdb

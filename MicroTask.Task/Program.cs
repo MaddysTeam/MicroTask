@@ -18,7 +18,7 @@ namespace MicroTask.Task
                 .UseIISIntegration()
                 .UseStartup<Startup>()
                 .UseApplicationInsights()
-                .UseUrls("http://*:8060")
+                .UseUrls("http://*:1122")
                 .Build();
 
             host.Run();

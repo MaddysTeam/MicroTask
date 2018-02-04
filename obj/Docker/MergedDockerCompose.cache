@@ -1,0 +1,88 @@
+networks:
+  default:
+    external:
+      name: nat
+services:
+  cache:
+    build:
+      context: C:\project\micro_service\MicroTask\MicroTask
+      dockerfile: ..\Cache\Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: cache
+    ports:
+    - '80'
+  configservice:
+    build:
+      context: C:\project\micro_service\MicroTask\MicroTask
+      dockerfile: ConfigService\Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: configservice
+    ports:
+    - '80'
+  microtask.project:
+    build:
+      context: C:\project\micro_service\MicroTask\MicroTask
+      dockerfile: MicroTask.Project\Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: microtask.project
+    ports:
+    - '80'
+  microtask.rediscache:
+    build:
+      context: C:\project\micro_service\MicroTask\MicroTask
+      dockerfile: MicroTask.RedisCache\Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: microtask.rediscache
+    ports:
+    - '80'
+  microtask.task:
+    build:
+      context: C:\project\micro_service\MicroTask\MicroTask
+      dockerfile: ..\MicroTask.Task\Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: microtask.task
+    ports:
+    - '80'
+  microtask.users:
+    build:
+      context: C:\project\micro_service\MicroTask\MicroTask
+      dockerfile: ..\MicroTask.Users\Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: microtask.users
+    ports:
+    - '80'
+  microtask.workjournal:
+    build:
+      context: C:\project\micro_service\MicroTask\MicroTask
+      dockerfile: MicroTask.WorkJournal\Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: microtask.workjournal
+    ports:
+    - '80'
+  microtask.worktask:
+    build:
+      context: C:\project\micro_service\MicroTask\MicroTask
+      dockerfile: ..\MicroTask.WorkTask\Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: microtask.worktask
+    ports:
+    - '80'
+  rediscache:
+    build:
+      context: C:\project\micro_service\MicroTask\MicroTask
+      dockerfile: ..\RedisCache\Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: rediscache
+    ports:
+    - '80'
+version: '3.0'
+volumes: {}

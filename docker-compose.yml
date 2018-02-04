@@ -48,3 +48,17 @@ services:
       context: .
       dockerfile: MicroTask.RedisCache\Dockerfile
 
+
+  microtask.worktask:
+    image: microtask.worktask
+    build:
+      context: .
+      dockerfile: ..\MicroTask.WorkTask\Dockerfile
+
+
+  configservice:
+    image: configservice
+    build:
+      context: .
+      dockerfile: ConfigService\Dockerfile
+

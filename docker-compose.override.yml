@@ -36,10 +36,22 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
       - "80"
+  microtask.worktask:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"
+  configservice:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"
 networks:
   default:
     external:
       name: nat
+
+
 
 
 

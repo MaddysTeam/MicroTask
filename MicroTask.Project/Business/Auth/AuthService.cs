@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 
 namespace Bussiess.Auth
 {
+
     public static class AuthService
     {
         /// <summary>
@@ -25,6 +26,7 @@ namespace Bussiess.Auth
             var handler = new DiscoveryHttpClientHandler(discoveryClient);
             var url = configuration.GetSection("Identity:Url").Value;
             var apiName = configuration.GetSection("Identity:Api").Value;
+            var secret = configuration.GetSection("Identity:Secret").Value;
 
             services.AddAuthorization();
             services.AddAuthentication(x =>
@@ -35,7 +37,7 @@ namespace Bussiess.Auth
             .AddIdentityServerAuthentication(x =>
             {
                 x.ApiName = apiName;
-                x.ApiSecret = "secret";
+                x.ApiSecret = secret;
                 x.Authority = url;
                 x.RequireHttpsMetadata = false;
                 x.JwtBackChannelHandler = handler;
@@ -45,38 +47,38 @@ namespace Bussiess.Auth
         }
 
 
-        public static async Task<string> AuthRequestAsync(AuthModel model, DiscoveryHttpClientHandler handler)
-        {
-            var client = new DiscoveryClient(model.Authority, handler)
-            {
-                Policy = new DiscoveryPolicy { RequireHttps = false }
-            };
-            var response = await client.GetAsync();
-            if (response.IsError)
-            {
-                model.Error = "";
-            }
+        //public static async Task<string> GetAccesstokenAsync(AuthModel model, DiscoveryHttpClientHandler handler)
+        //{
+        //    var client = new DiscoveryClient(model.Authority, handler)
+        //    {
+        //        Policy = new DiscoveryPolicy { RequireHttps = false }
+        //    };
+        //    var response = await client.GetAsync();
+        //    if (response.IsError)
+        //    {
+        //        model.Error = "";
+        //    }
 
-            // var tokenClinet = new TokenClient(response.TokenEndpoint, "client", "secret", handler);
-            var tokenClinet = new TokenClient(response.TokenEndpoint, model.Client, model.Secret, handler);
-            var tokenResponse = await tokenClinet.RequestClientCredentialsAsync("UserApi");
+        //    // var tokenClinet = new TokenClient(response.TokenEndpoint, "client", "secret", handler);
+        //    var tokenClinet = new TokenClient(response.TokenEndpoint, model.Client, model.Secret, handler);
+        //    var tokenResponse = await tokenClinet.RequestClientCredentialsAsync("UserApi");
 
-            if (tokenResponse.IsError)
-            {
-                Console.WriteLine(tokenResponse.Error);
-            }
+        //    if (tokenResponse.IsError)
+        //    {
+        //        Console.WriteLine(tokenResponse.Error);
+        //    }
 
-            model.AccessToken = tokenResponse.AccessToken;
+        //    model.AccessToken = tokenResponse.AccessToken;
 
-            return tokenResponse.AccessToken;
-            // Console.WriteLine(tokenResponse.Json);
+        //    return tokenResponse.AccessToken;
+        //    // Console.WriteLine(tokenResponse.Json);
 
-            //var httpClient = new HttpClient();
-            //httpClient.SetBearerToken(tokenResponse.AccessToken);
+        //    //var httpClient = new HttpClient();
+        //    //httpClient.SetBearerToken(tokenResponse.AccessToken);
 
-            //responseMessage = await httpClient.GetAsync("http://localhost:5001/api/values");
+        //    //responseMessage = await httpClient.GetAsync("http://localhost:5001/api/values");
 
-            //return responseMessage;
-        }
+        //    //return responseMessage;
+        //}
     }
 }

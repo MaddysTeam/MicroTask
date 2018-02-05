@@ -17,7 +17,6 @@ namespace Identity
             _configuration = configuration;
         }
 
-        // scopes define the resources in your system
         public static IEnumerable<IdentityResource> GetIdentityResources()
         {
             return new List<IdentityResource>
@@ -31,52 +30,52 @@ namespace Identity
         {
             return new List<ApiResource>
             {
-                new ApiResource("api1", "My API")
+                new ApiResource("ProjectApi", "PROJECT API")
                 {
-                    ApiSecrets = {new Secret("secret".Sha256())},
-                    UserClaims = new List<string>{"role"}
+                    //ApiSecrets = {new Secret("secret".Sha256())},
+                    //UserClaims = new List<string>{"role"}
+                },
+                new ApiResource("UserApi","USER API")
+                {
+                    //ApiSecrets = {new Secret("secret".Sha256())},
+                    //UserClaims = new List<string>{"role"}
                 }
             };
         }
 
-        // clients want to access resources (aka scopes)
         public IEnumerable<Client> GetClients()
         {
             var accessTokenLifetime = int.Parse(_configuration.GetConnectionString("AccessTokenLifetime"));
+
+            // clients
             return new List<Client>
             {
+                // for client credentials by using jwt token type
+                new Client
+                {
+                    ClientId = "client",
+                    AllowedGrantTypes = GrantTypes.ClientCredentials,
+                    ClientSecrets =
+                    {
+                        new Secret("secret".Sha256())
+                    },
+                    AllowedScopes = { "UserApi","ProjectApi" },
+                    AccessTokenType = AccessTokenType.Jwt
+                },
+                // for owner password by using reference token type
                 new Client
                 {
                     ClientId = "client.reference",
                     ClientSecrets =
                     {
-                        new Secret("A30E6E57-086C-43BE-AF79-67ADECDA0A5B".Sha256())
+                        new Secret("secret".Sha256())
                     },
                     AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
                     AllowOfflineAccess = true,
                     AccessTokenLifetime = accessTokenLifetime,
-                    AllowedScopes =
-                    {
-                        "api1"
-                    },
+                    AllowedScopes = { "UserApi","ProjectApi" },
                     AccessTokenType = AccessTokenType.Reference
                 },
-                new Client
-                {
-                    ClientId = "client.jwt",
-                    ClientSecrets =
-                    {
-                        new Secret("AB2DC090-0125-4FB8-902A-34AFB64B7D9B".Sha256())
-                    },
-                    AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
-                    AllowOfflineAccess = true,
-                    AccessTokenLifetime = accessTokenLifetime,
-                    AllowedScopes =
-                    {
-                        "api1"
-                    },
-                    AccessTokenType = AccessTokenType.Jwt
-                }
             };
         }
     }

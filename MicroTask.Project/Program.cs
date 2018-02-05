@@ -20,10 +20,8 @@ namespace MicroTask.Project
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                  .UseCloudFoundryHosting()
-                  .AddCloudFoundry()
                   .UseStartup<Startup>()
-                  .UseUrls("http://*:8050")
+                  .UseUrls("http://*:2000")
                   .Build();
     }
 }

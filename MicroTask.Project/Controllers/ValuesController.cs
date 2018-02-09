@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Threading.Tasks;
-using IdentityModel.Client;
-using Microsoft.AspNetCore.Authorization;
+﻿using Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 using Steeltoe.Common.Discovery;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace MicroTask.Project.Controllers
 {
@@ -21,11 +17,11 @@ namespace MicroTask.Project.Controllers
 
         // GET api/values
         [HttpGet]
+        [ActionLoggerFilter]
         public async Task<IEnumerable<string>> Get()
         {
-           
-
-            return new string[] { "value1", "value2" };
+            //throw new ProjectExcption()
+            return new string[] { "value2001", "value2002" };
         }
 
         // GET api/values/5

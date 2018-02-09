@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Business.Services
+namespace Business
 {
-    public interface IProjectService
+    public class ProjectService : IProjectService
     {
     }
 }

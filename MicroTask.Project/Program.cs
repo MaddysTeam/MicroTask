@@ -21,7 +21,7 @@ namespace MicroTask.Project
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                   .UseStartup<Startup>()
-                  .UseUrls("http://*:2000")
+                  .UseUrls("http://*:2001")
                   .Build();
     }
 }

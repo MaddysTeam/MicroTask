@@ -1,0 +1,10 @@
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Project\bin\Any CPU\Release\netcoreapp2.0\MicroTask.Project.deps.json
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Project\bin\Any CPU\Release\netcoreapp2.0\MicroTask.Project.runtimeconfig.json
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Project\bin\Any CPU\Release\netcoreapp2.0\MicroTask.Project.runtimeconfig.dev.json
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Project\bin\Any CPU\Release\netcoreapp2.0\MicroTask.Project.dll
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Project\bin\Any CPU\Release\netcoreapp2.0\MicroTask.Project.pdb
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Project\obj\Any CPU\Release\netcoreapp2.0\MicroTask.Project.csproj.CoreCompileInputs.cache
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Project\obj\Any CPU\Release\netcoreapp2.0\MicroTask.Project.AssemblyInfoInputs.cache
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Project\obj\Any CPU\Release\netcoreapp2.0\MicroTask.Project.AssemblyInfo.cs
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Project\obj\Any CPU\Release\netcoreapp2.0\MicroTask.Project.dll
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Project\obj\Any CPU\Release\netcoreapp2.0\MicroTask.Project.pdb

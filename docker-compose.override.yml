@@ -46,10 +46,16 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
       - "80"
+  microtask.rediscacheservice:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"
 networks:
   default:
     external:
       name: nat
+
 
 
 

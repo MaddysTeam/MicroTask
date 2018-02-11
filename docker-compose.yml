@@ -62,3 +62,10 @@ services:
       context: .
       dockerfile: ConfigService\Dockerfile
 
+
+  microtask.rediscacheservice:
+    image: microtask.rediscacheservice
+    build:
+      context: .
+      dockerfile: ..\MicroTask.RedisCacheService\Dockerfile
+

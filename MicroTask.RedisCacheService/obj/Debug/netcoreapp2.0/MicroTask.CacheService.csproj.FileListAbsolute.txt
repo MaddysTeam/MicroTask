@@ -1,0 +1,13 @@
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.RedisCacheService\bin\Debug\netcoreapp2.0\MicroTask.CacheService.deps.json
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.RedisCacheService\bin\Debug\netcoreapp2.0\MicroTask.CacheService.runtimeconfig.json
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.RedisCacheService\bin\Debug\netcoreapp2.0\MicroTask.CacheService.runtimeconfig.dev.json
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.RedisCacheService\bin\Debug\netcoreapp2.0\MicroTask.CacheService.dll
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.RedisCacheService\bin\Debug\netcoreapp2.0\MicroTask.CacheService.pdb
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.RedisCacheService\bin\Debug\netcoreapp2.0\Camoran.Redis.dll
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.RedisCacheService\bin\Debug\netcoreapp2.0\Camoran.Redis.pdb
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.RedisCacheService\obj\Debug\netcoreapp2.0\MicroTask.CacheService.csprojResolveAssemblyReference.cache
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.RedisCacheService\obj\Debug\netcoreapp2.0\MicroTask.CacheService.csproj.CoreCompileInputs.cache
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.RedisCacheService\obj\Debug\netcoreapp2.0\MicroTask.CacheService.AssemblyInfoInputs.cache
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.RedisCacheService\obj\Debug\netcoreapp2.0\MicroTask.CacheService.AssemblyInfo.cs
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.RedisCacheService\obj\Debug\netcoreapp2.0\MicroTask.CacheService.dll
+C:\project\micro_service\MicroTask\MicroTask\MicroTask.RedisCacheService\obj\Debug\netcoreapp2.0\MicroTask.CacheService.pdb

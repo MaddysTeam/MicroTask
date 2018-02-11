@@ -2,6 +2,34 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
+      "Dapper/1.50.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Data.SqlClient": "4.4.0",
+          "System.Reflection.Emit.Lightweight": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.4.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Dapper.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Dapper.dll": {}
+        }
+      },
+      "Dapper.Contrib/1.50.4": {
+        "type": "package",
+        "dependencies": {
+          "Dapper": "1.50.4",
+          "Microsoft.CSharp": "4.3.0",
+          "System.Reflection.Emit": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Dapper.Contrib.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Dapper.Contrib.dll": {}
+        }
+      },
       "IdentityModel/3.0.0": {
         "type": "package",
         "dependencies": {
@@ -2711,6 +2739,87 @@
           }
         }
       },
+      "MySql.Data/6.10.6": {
+        "type": "package",
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "4.4.0",
+          "System.Security.Permissions": "4.4.0",
+          "System.Text.Encoding.CodePages": "4.0.1"
+        },
+        "compile": {
+          "lib/netcoreapp2.0/MySql.Data.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/MySql.Data.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/netcoreapp2.0/app.config.transform": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/netcoreapp2.0/docs/MySqlCommand.xml": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/netcoreapp2.0/docs/MySqlCommandBuilder.xml": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/netcoreapp2.0/docs/MySqlConnection.xml": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/netcoreapp2.0/docs/MySqlConnectionStringBuilder.xml": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/netcoreapp2.0/docs/MySqlDataAdapter.xml": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/netcoreapp2.0/docs/MySqlDataReader.xml": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/netcoreapp2.0/docs/MySqlException.xml": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/netcoreapp2.0/docs/MySqlHelper.xml": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/netcoreapp2.0/docs/MySqlParameter.xml": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/netcoreapp2.0/docs/MySqlParameterCollection.xml": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/netcoreapp2.0/docs/MySqlTransaction.xml": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/netcoreapp2.0/web.config.transform": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
       "NETStandard.Library/2.0.0": {
         "type": "package",
         "dependencies": {
@@ -2754,6 +2863,15 @@
         },
         "runtime": {
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
+        }
+      },
+      "Oracle.ManagedDataAccess/12.2.1100": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Oracle.ManagedDataAccess.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Oracle.ManagedDataAccess.dll": {}
         }
       },
       "Pivotal.Discovery.ClientCore/2.0.0-rc1": {
@@ -3385,6 +3503,18 @@
         },
         "runtime": {
           "lib/netstandard1.5/System.ComponentModel.TypeConverter.dll": {}
+        }
+      },
+      "System.Configuration.ConfigurationManager/4.4.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.Cryptography.ProtectedData": "4.4.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Configuration.ConfigurationManager.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll": {}
         }
       },
       "System.Console/4.3.0": {
@@ -4052,17 +4182,13 @@
           "ref/netstandard1.0/System.Reflection.Primitives.dll": {}
         }
       },
-      "System.Reflection.TypeExtensions/4.3.0": {
+      "System.Reflection.TypeExtensions/4.4.0": {
         "type": "package",
-        "dependencies": {
-          "System.Reflection": "4.3.0",
-          "System.Runtime": "4.3.0"
-        },
         "compile": {
-          "ref/netstandard1.5/System.Reflection.TypeExtensions.dll": {}
+          "ref/netcoreapp2.0/_._": {}
         },
         "runtime": {
-          "lib/netstandard1.5/System.Reflection.TypeExtensions.dll": {}
+          "lib/netcoreapp2.0/_._": {}
         }
       },
       "System.Resources.ResourceManager/4.3.0": {
@@ -4434,6 +4560,21 @@
           "lib/netstandard1.3/System.Security.Cryptography.Primitives.dll": {}
         }
       },
+      "System.Security.Cryptography.ProtectedData/4.4.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "System.Security.Cryptography.X509Certificates/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -4484,6 +4625,18 @@
         },
         "runtime": {
           "lib/netstandard2.0/System.Security.Cryptography.Xml.dll": {}
+        }
+      },
+      "System.Security.Permissions/4.4.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.AccessControl": "4.4.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Security.Permissions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Permissions.dll": {}
         }
       },
       "System.Security.Principal/4.3.0": {
@@ -4575,7 +4728,7 @@
           "Microsoft.NETCore.Platforms": "2.0.0"
         },
         "compile": {
-          "ref/netstandard2.0/_._": {}
+          "ref/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
         },
         "runtime": {
           "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
@@ -4873,6 +5026,36 @@
     }
   },
   "libraries": {
+    "Dapper/1.50.4": {
+      "sha512": "t5DMz+1aEkBcyCgkj+6hJHNsUq3k/d67lVMTNzICEhVjPUI3Gt2kgotSK8S4SpziIbFPphnOEn8M6Q75ED5hRQ==",
+      "type": "package",
+      "path": "dapper/1.50.4",
+      "files": [
+        "dapper.1.50.4.nupkg.sha512",
+        "dapper.nuspec",
+        "lib/net451/Dapper.dll",
+        "lib/net451/Dapper.xml",
+        "lib/netstandard1.3/Dapper.dll",
+        "lib/netstandard1.3/Dapper.xml",
+        "lib/netstandard2.0/Dapper.dll",
+        "lib/netstandard2.0/Dapper.xml"
+      ]
+    },
+    "Dapper.Contrib/1.50.4": {
+      "sha512": "2RBJJgOMzyZuD4LdcfrqGGZ005IppwOwo0JFlntZ0S0J/d69I6ehiYwiL4SyLE6mTBrB17uUZPIM67KO3GFEpw==",
+      "type": "package",
+      "path": "dapper.contrib/1.50.4",
+      "files": [
+        "dapper.contrib.1.50.4.nupkg.sha512",
+        "dapper.contrib.nuspec",
+        "lib/net451/Dapper.Contrib.dll",
+        "lib/net451/Dapper.Contrib.xml",
+        "lib/netstandard1.3/Dapper.Contrib.dll",
+        "lib/netstandard1.3/Dapper.Contrib.xml",
+        "lib/netstandard2.0/Dapper.Contrib.dll",
+        "lib/netstandard2.0/Dapper.Contrib.xml"
+      ]
+    },
     "IdentityModel/3.0.0": {
       "sha512": "EKMOOUUqDzBR3goiA8eWJ1aQBz1AMfKVxxR7XnzAf5qq2k9vr6GT91SyHmzC14KINpNNJOrbmowXf5S04gQ0ZA==",
       "type": "package",
@@ -5163,7 +5346,7 @@
       ]
     },
     "Microsoft.AspNetCore.Authorization/2.0.1": {
-      "sha512": "0nZ5slZMwvtEgoR5b/T/MB4uM5qPQqVhPxbtrWb9W0QsIktB0gkAmpD6ciNj4ltZ+zRaY3rWZSS09SaFrsUTIQ==",
+      "sha512": "fk636zISzGAWIGwLq2f0HLBS3WCN/diQ/rT9JgMgpMgMEENcHEoW+ThvHJXuUvbHT/4xT/KFG1Zr1G15+5wiLA==",
       "type": "package",
       "path": "microsoft.aspnetcore.authorization/2.0.1",
       "files": [
@@ -6774,7 +6957,7 @@
       ]
     },
     "Microsoft.Extensions.PlatformAbstractions/1.1.0": {
-      "sha512": "H6ZsQzxYw/6k2DfEQRXdC+vQ6obd6Uba3uGJrnJ2vG4PRXjQZ7seB13JdCfE72abp8E6Fk3gGgDzfJiLZi5ZpQ==",
+      "sha512": "7q1zBW19oTfewc10wjSu1tLa/zxF94KPvDhS7omXsl6HpRS3jSfgHw2DNwp++2dMf772ikVpgUJV6OsFiSobyA==",
       "type": "package",
       "path": "microsoft.extensions.platformabstractions/1.1.0",
       "files": [
@@ -7562,6 +7745,88 @@
         "version.txt"
       ]
     },
+    "MySql.Data/6.10.6": {
+      "sha512": "dcod4CxVkrRANjfVWS7um5HTyLFJhyBGp5hVSdmrhhZZiP9cX3ZNfoZ0W88f6lDWExJuILsAIbctZirQ9mpjQQ==",
+      "type": "package",
+      "path": "mysql.data/6.10.6",
+      "files": [
+        "content/app.config.transform",
+        "content/docs/MySqlCommand.xml",
+        "content/docs/MySqlCommandBuilder.xml",
+        "content/docs/MySqlConnection.xml",
+        "content/docs/MySqlConnectionStringBuilder.xml",
+        "content/docs/MySqlDataAdapter.xml",
+        "content/docs/MySqlDataReader.xml",
+        "content/docs/MySqlException.xml",
+        "content/docs/MySqlHelper.xml",
+        "content/docs/MySqlParameter.xml",
+        "content/docs/MySqlParameterCollection.xml",
+        "content/docs/MySqlTransaction.xml",
+        "content/web.config.transform",
+        "contentFiles/any/net452/app.config.transform",
+        "contentFiles/any/net452/docs/MySqlCommand.xml",
+        "contentFiles/any/net452/docs/MySqlCommandBuilder.xml",
+        "contentFiles/any/net452/docs/MySqlConnection.xml",
+        "contentFiles/any/net452/docs/MySqlConnectionStringBuilder.xml",
+        "contentFiles/any/net452/docs/MySqlDataAdapter.xml",
+        "contentFiles/any/net452/docs/MySqlDataReader.xml",
+        "contentFiles/any/net452/docs/MySqlException.xml",
+        "contentFiles/any/net452/docs/MySqlHelper.xml",
+        "contentFiles/any/net452/docs/MySqlParameter.xml",
+        "contentFiles/any/net452/docs/MySqlParameterCollection.xml",
+        "contentFiles/any/net452/docs/MySqlTransaction.xml",
+        "contentFiles/any/net452/web.config.transform",
+        "contentFiles/any/netcoreapp2.0/app.config.transform",
+        "contentFiles/any/netcoreapp2.0/docs/MySqlCommand.xml",
+        "contentFiles/any/netcoreapp2.0/docs/MySqlCommandBuilder.xml",
+        "contentFiles/any/netcoreapp2.0/docs/MySqlConnection.xml",
+        "contentFiles/any/netcoreapp2.0/docs/MySqlConnectionStringBuilder.xml",
+        "contentFiles/any/netcoreapp2.0/docs/MySqlDataAdapter.xml",
+        "contentFiles/any/netcoreapp2.0/docs/MySqlDataReader.xml",
+        "contentFiles/any/netcoreapp2.0/docs/MySqlException.xml",
+        "contentFiles/any/netcoreapp2.0/docs/MySqlHelper.xml",
+        "contentFiles/any/netcoreapp2.0/docs/MySqlParameter.xml",
+        "contentFiles/any/netcoreapp2.0/docs/MySqlParameterCollection.xml",
+        "contentFiles/any/netcoreapp2.0/docs/MySqlTransaction.xml",
+        "contentFiles/any/netcoreapp2.0/web.config.transform",
+        "contentFiles/any/netstandard1.3/app.config.transform",
+        "contentFiles/any/netstandard1.3/docs/MySqlCommand.xml",
+        "contentFiles/any/netstandard1.3/docs/MySqlCommandBuilder.xml",
+        "contentFiles/any/netstandard1.3/docs/MySqlConnection.xml",
+        "contentFiles/any/netstandard1.3/docs/MySqlConnectionStringBuilder.xml",
+        "contentFiles/any/netstandard1.3/docs/MySqlDataAdapter.xml",
+        "contentFiles/any/netstandard1.3/docs/MySqlDataReader.xml",
+        "contentFiles/any/netstandard1.3/docs/MySqlException.xml",
+        "contentFiles/any/netstandard1.3/docs/MySqlHelper.xml",
+        "contentFiles/any/netstandard1.3/docs/MySqlParameter.xml",
+        "contentFiles/any/netstandard1.3/docs/MySqlParameterCollection.xml",
+        "contentFiles/any/netstandard1.3/docs/MySqlTransaction.xml",
+        "contentFiles/any/netstandard1.3/web.config.transform",
+        "contentFiles/any/netstandard2.0/app.config.transform",
+        "contentFiles/any/netstandard2.0/docs/MySqlCommand.xml",
+        "contentFiles/any/netstandard2.0/docs/MySqlCommandBuilder.xml",
+        "contentFiles/any/netstandard2.0/docs/MySqlConnection.xml",
+        "contentFiles/any/netstandard2.0/docs/MySqlConnectionStringBuilder.xml",
+        "contentFiles/any/netstandard2.0/docs/MySqlDataAdapter.xml",
+        "contentFiles/any/netstandard2.0/docs/MySqlDataReader.xml",
+        "contentFiles/any/netstandard2.0/docs/MySqlException.xml",
+        "contentFiles/any/netstandard2.0/docs/MySqlHelper.xml",
+        "contentFiles/any/netstandard2.0/docs/MySqlParameter.xml",
+        "contentFiles/any/netstandard2.0/docs/MySqlParameterCollection.xml",
+        "contentFiles/any/netstandard2.0/docs/MySqlTransaction.xml",
+        "contentFiles/any/netstandard2.0/web.config.transform",
+        "lib/net452/MySql.Data.dll",
+        "lib/net452/MySql.Data.xml",
+        "lib/netcoreapp2.0/MySql.Data.dll",
+        "lib/netcoreapp2.0/MySql.Data.xml",
+        "lib/netstandard1.3/MySql.Data.dll",
+        "lib/netstandard1.3/MySql.Data.xml",
+        "lib/netstandard2.0/MySql.Data.dll",
+        "lib/netstandard2.0/MySql.Data.xml",
+        "mysql.data.6.10.6.nupkg.sha512",
+        "mysql.data.nuspec"
+      ]
+    },
     "NETStandard.Library/2.0.0": {
       "sha512": "7jnbRU+L08FXKMxqUflxEXtVymWvNOrS8yHgu9s6EM8Anr6T/wIX4nZ08j/u3Asz+tCufp3YVwFSEvFTPYmBPA==",
       "type": "package",
@@ -7728,6 +7993,28 @@
         "lib/netstandard1.3/Newtonsoft.Json.Bson.xml",
         "newtonsoft.json.bson.1.0.1.nupkg.sha512",
         "newtonsoft.json.bson.nuspec"
+      ]
+    },
+    "Oracle.ManagedDataAccess/12.2.1100": {
+      "sha512": "PEiPi7VrQyJmcZm0TtiIBNATR13JcuLUAncpdCrCY5us9KjIdwjbgbdb6lwsc9/EHETfUFiYlYCdSRY+qkcdzQ==",
+      "type": "package",
+      "path": "oracle.manageddataaccess/12.2.1100",
+      "files": [
+        "bin/x64/Oracle.ManagedDataAccessDTC.dll",
+        "bin/x64/Oracle.ManagedDataAccessIOP.dll",
+        "bin/x86/Oracle.ManagedDataAccessDTC.dll",
+        "bin/x86/Oracle.ManagedDataAccessIOP.dll",
+        "content/net40/App.config.install.xdt",
+        "content/net40/App.config.transform",
+        "content/net40/App.config.uninstall.xdt",
+        "content/net40/Web.config.install.xdt",
+        "content/net40/Web.config.transform",
+        "content/net40/Web.config.uninstall.xdt",
+        "info.txt",
+        "lib/net40/Oracle.ManagedDataAccess.dll",
+        "oracle.manageddataaccess.12.2.1100.nupkg.sha512",
+        "oracle.manageddataaccess.nuspec",
+        "readme.txt"
       ]
     },
     "Pivotal.Discovery.ClientCore/2.0.0-rc1": {
@@ -8487,7 +8774,7 @@
       ]
     },
     "System.Collections.Specialized/4.3.0": {
-      "sha512": "Epx8PoVZR0iuOnJJDzp7pWvdfMMOAvpUo95pC4ScH2mJuXkKA2Y4aR3cG9qt2klHgSons1WFh4kcGW7cSXvrxg==",
+      "sha512": "4CdaBD613qhNJCYZfV9m/ZIMYMwwtgnIbuaX3Ml0iCT71IZUVJekr1OKT9BQtsnnOzVTufJ2oOGRBe+RVwIRUg==",
       "type": "package",
       "path": "system.collections.specialized/4.3.0",
       "files": [
@@ -8666,7 +8953,7 @@
       ]
     },
     "System.ComponentModel.Primitives/4.3.0": {
-      "sha512": "j8GUkCpM8V4d4vhLIIoBLGey2Z5bCkMVNjEZseyAlm4n5arcsJOeI3zkUP+zvZgzsbLTYh4lYeP/ZD/gdIAPrw==",
+      "sha512": "f+6D15Sb5KR5ySHOUAPA+tS6/QX44wTqb079lntpd59tA+ZAu88zml5PdZaX1lMhzoxyi64ot9flqRalXTxOKQ==",
       "type": "package",
       "path": "system.componentmodel.primitives/4.3.0",
       "files": [
@@ -8703,7 +8990,7 @@
       ]
     },
     "System.ComponentModel.TypeConverter/4.3.0": {
-      "sha512": "16pQ6P+EdhcXzPiEK4kbA953Fu0MNG2ovxTZU81/qsCd1zPRsKc3uif5NgvllCY598k6bI0KUyKW8fanlfaDQg==",
+      "sha512": "W61SmUE8zaP3oPPZfaTmyNJRyIde8cKlFveK6ipwDdMC9zcL6PmxKF1TCWgyA5V1YgePXSKs5HkKydyOu+Y0/A==",
       "type": "package",
       "path": "system.componentmodel.typeconverter/4.3.0",
       "files": [
@@ -8751,6 +9038,25 @@
         "ref/xamarinwatchos10/_._",
         "system.componentmodel.typeconverter.4.3.0.nupkg.sha512",
         "system.componentmodel.typeconverter.nuspec"
+      ]
+    },
+    "System.Configuration.ConfigurationManager/4.4.0": {
+      "sha512": "gWwQv/Ug1qWJmHCmN17nAbxJYmQBM/E94QxKLksvUiiKB1Ld3Sc/eK1lgmbSjDFxkQhVuayI/cGFZhpBSodLrg==",
+      "type": "package",
+      "path": "system.configuration.configurationmanager/4.4.0",
+      "files": [
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Configuration.ConfigurationManager.dll",
+        "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll",
+        "ref/net461/System.Configuration.ConfigurationManager.dll",
+        "ref/net461/System.Configuration.ConfigurationManager.xml",
+        "ref/netstandard2.0/System.Configuration.ConfigurationManager.dll",
+        "ref/netstandard2.0/System.Configuration.ConfigurationManager.xml",
+        "system.configuration.configurationmanager.4.4.0.nupkg.sha512",
+        "system.configuration.configurationmanager.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Console/4.3.0": {
@@ -8856,7 +9162,7 @@
       ]
     },
     "System.Diagnostics.Contracts/4.3.0": {
-      "sha512": "eelRRbnm+OloiQvp9CXS0ixjNQldjjkHO4iIkR5XH2VIP8sUB/SIpa1TdUW6/+HDcQ+MlhP3pNa1u5SbzYuWGA==",
+      "sha512": "Qaxc5zvZjD8mmsnBCpjz1faUX7wW7OJI8VkexAizz8kxa5GXj9wj7Cq5QcLBG8sivMJtJzqvo4m7Q8fLeJp1hw==",
       "type": "package",
       "path": "system.diagnostics.contracts/4.3.0",
       "files": [
@@ -9045,7 +9351,7 @@
       ]
     },
     "System.Diagnostics.StackTrace/4.3.0": {
-      "sha512": "BiHg0vgtd35/DM9jvtaC1eKRpWZxr0gcQd643ABG7GnvSlf5pOkY2uyd42mMOJoOmKvnpNj0F4tuoS1pacTwYw==",
+      "sha512": "ebIecQ2eLt/HVlkE4MBVAG7e5kyej5wfgMzbKHwnWOsBDl3kNG/soWcesT+DcOpGmZVKD4l0Xacjg70ypwOtgA==",
       "type": "package",
       "path": "system.diagnostics.stacktrace/4.3.0",
       "files": [
@@ -10583,21 +10889,23 @@
         "ref/xamarinwatchos10/_._"
       ]
     },
-    "System.Reflection.TypeExtensions/4.3.0": {
-      "sha512": "7u6ulLcZbyxB5Gq0nMkQttcdBTx57ibzw+4IOXEfR+sXYQoHvjW5LTLyNr8O22UIMrqYbchJQJnos4eooYzYJA==",
+    "System.Reflection.TypeExtensions/4.4.0": {
+      "sha512": "dkmh/ySlwnXJp/1qYP9uyKkCK1CXR/REFzl7abHcArxBcV91mY2CgrrzSRA5Z/X4MevJWwXsklGRdR3A7K9zbg==",
       "type": "package",
-      "path": "system.reflection.typeextensions/4.3.0",
+      "path": "system.reflection.typeextensions/4.4.0",
       "files": [
-        "System.Reflection.TypeExtensions.4.3.0.nupkg.sha512",
-        "System.Reflection.TypeExtensions.nuspec",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net46/System.Reflection.TypeExtensions.dll",
-        "lib/net462/System.Reflection.TypeExtensions.dll",
+        "lib/net461/System.Reflection.TypeExtensions.dll",
         "lib/netcore50/System.Reflection.TypeExtensions.dll",
+        "lib/netcoreapp1.0/System.Reflection.TypeExtensions.dll",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.3/System.Reflection.TypeExtensions.dll",
         "lib/netstandard1.5/System.Reflection.TypeExtensions.dll",
+        "lib/netstandard2.0/System.Reflection.TypeExtensions.dll",
         "lib/xamarinios10/_._",
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
@@ -10605,7 +10913,9 @@
         "ref/MonoAndroid10/_._",
         "ref/MonoTouch10/_._",
         "ref/net46/System.Reflection.TypeExtensions.dll",
-        "ref/net462/System.Reflection.TypeExtensions.dll",
+        "ref/net461/System.Reflection.TypeExtensions.dll",
+        "ref/net461/System.Reflection.TypeExtensions.xml",
+        "ref/netcoreapp2.0/_._",
         "ref/netstandard1.3/System.Reflection.TypeExtensions.dll",
         "ref/netstandard1.3/System.Reflection.TypeExtensions.xml",
         "ref/netstandard1.3/de/System.Reflection.TypeExtensions.xml",
@@ -10628,11 +10938,17 @@
         "ref/netstandard1.5/ru/System.Reflection.TypeExtensions.xml",
         "ref/netstandard1.5/zh-hans/System.Reflection.TypeExtensions.xml",
         "ref/netstandard1.5/zh-hant/System.Reflection.TypeExtensions.xml",
+        "ref/netstandard2.0/System.Reflection.TypeExtensions.dll",
+        "ref/netstandard2.0/System.Reflection.TypeExtensions.xml",
         "ref/xamarinios10/_._",
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
-        "runtimes/aot/lib/netcore50/System.Reflection.TypeExtensions.dll"
+        "runtimes/aot/lib/netcore50/System.Reflection.TypeExtensions.dll",
+        "system.reflection.typeextensions.4.4.0.nupkg.sha512",
+        "system.reflection.typeextensions.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Resources.ResourceManager/4.3.0": {
@@ -11096,7 +11412,7 @@
       ]
     },
     "System.Runtime.Serialization.Formatters/4.3.0": {
-      "sha512": "KT591AkTNFOTbhZlaeMVvfax3RqhH1EJlcwF50Wm7sfnBLuHiOeZRRKrr1ns3NESkM20KPZ5Ol/ueMq5vg4QoQ==",
+      "sha512": "hU7FoYKJVeqj0o2jvFqmMF86IcRPrx//DXJiLsXcu9GuBPYU9QbUdtLCjeZlr8gyoIzVf9jV03K1K/DG1tZcow==",
       "type": "package",
       "path": "system.runtime.serialization.formatters/4.3.0",
       "files": [
@@ -11180,7 +11496,7 @@
       ]
     },
     "System.Runtime.Serialization.Primitives/4.3.0": {
-      "sha512": "Wz+0KOukJGAlXjtKr+5Xpuxf8+c8739RI1C+A2BoQZT+wMCCoMDDdO8/4IRHfaVINqL78GO8dW8G2lW/e45Mcw==",
+      "sha512": "FWToSbVUcDz9CDf56ukfImZiK8Yow224L/NktKvQom9LpmI/chiIbrDrwKTb+YGEQYiwpXsLCZUXz3PbMpFrjA==",
       "type": "package",
       "path": "system.runtime.serialization.primitives/4.3.0",
       "files": [
@@ -11500,6 +11816,45 @@
         "ref/xamarinwatchos10/_._"
       ]
     },
+    "System.Security.Cryptography.ProtectedData/4.4.0": {
+      "sha512": "cJV7ScGW7EhatRsjehfvvYVBvtiSMKgN8bOVI0bQhnF5bU7vnHVIsH49Kva7i7GWaWYvmEzkYVk1TC+gZYBEog==",
+      "type": "package",
+      "path": "system.security.cryptography.protecteddata/4.4.0",
+      "files": [
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Security.Cryptography.ProtectedData.dll",
+        "lib/net461/System.Security.Cryptography.ProtectedData.dll",
+        "lib/netstandard1.3/System.Security.Cryptography.ProtectedData.dll",
+        "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Security.Cryptography.ProtectedData.dll",
+        "ref/net461/System.Security.Cryptography.ProtectedData.dll",
+        "ref/net461/System.Security.Cryptography.ProtectedData.xml",
+        "ref/netstandard1.3/System.Security.Cryptography.ProtectedData.dll",
+        "ref/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+        "ref/netstandard2.0/System.Security.Cryptography.ProtectedData.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/win/lib/net46/System.Security.Cryptography.ProtectedData.dll",
+        "runtimes/win/lib/net461/System.Security.Cryptography.ProtectedData.dll",
+        "runtimes/win/lib/netstandard1.3/System.Security.Cryptography.ProtectedData.dll",
+        "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+        "system.security.cryptography.protecteddata.4.4.0.nupkg.sha512",
+        "system.security.cryptography.protecteddata.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Security.Cryptography.X509Certificates/4.3.0": {
       "sha512": "t2Tmu6Y2NtJ2um0RtcuhP7ZdNNxXEgUm2JeoA/0NvlMjAhKCnM1NX07TDl3244mVp3QU6LPEhT3HTtH1uF7IYw==",
       "type": "package",
@@ -11569,6 +11924,24 @@
         "ref/netstandard2.0/System.Security.Cryptography.Xml.xml",
         "system.security.cryptography.xml.4.4.0.nupkg.sha512",
         "system.security.cryptography.xml.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Security.Permissions/4.4.0": {
+      "sha512": "ArK+Kh7BSqWhspqO3qe8R25MeUzBm3ZdWbYiN6Q0kLO3nR4dLeZzS03C0QUI/470w7pGRm7lUZ9sjfDQKJjRcQ==",
+      "type": "package",
+      "path": "system.security.permissions/4.4.0",
+      "files": [
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Security.Permissions.dll",
+        "lib/netstandard2.0/System.Security.Permissions.dll",
+        "ref/net461/System.Security.Permissions.dll",
+        "ref/netstandard2.0/System.Security.Permissions.dll",
+        "ref/netstandard2.0/System.Security.Permissions.xml",
+        "system.security.permissions.4.4.0.nupkg.sha512",
+        "system.security.permissions.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
@@ -12166,7 +12539,7 @@
       ]
     },
     "System.Threading.Tasks.Parallel/4.3.0": {
-      "sha512": "cbjBNZHf/vQCfcdhzx7knsiygoCKgxL8mZOeocXZn5gWhCdzHIq6bYNKWX0LAJCWYP7bds4yBK8p06YkP0oa0g==",
+      "sha512": "bjpLiNAiXgnK+4Y1ePza1zZ87OOOpSSMe93TBruKC8Xd2oYjmXs8IrFaVpiDf9Aek3QdMOaFJhL5nfZ+FAFa3A==",
       "type": "package",
       "path": "system.threading.tasks.parallel/4.3.0",
       "files": [
@@ -12735,10 +13108,14 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
+      "Dapper >= 1.50.4",
+      "Dapper.Contrib >= 1.50.4",
       "IdentityModel >= 3.0.0",
       "IdentityServer4.AccessTokenValidation >= 2.3.0",
       "Microsoft.AspNetCore.All >= 2.0.3",
       "Microsoft.NETCore.App >= 2.0.0",
+      "MySql.Data >= 6.10.6",
+      "Oracle.ManagedDataAccess >= 12.2.1100",
       "Pivotal.Discovery.ClientCore >= 2.0.0-rc1"
     ]
   },
@@ -12753,11 +13130,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "E:\\项目文件(GitLab)\\MicroService\\MicroTask\\MicroTask\\MicroTask.Project\\MicroTask.Project.csproj",
+      "projectUniqueName": "C:\\project\\micro_service\\MicroTask\\MicroTask\\MicroTask.Project\\MicroTask.Project.csproj",
       "projectName": "MicroTask.Project",
-      "projectPath": "E:\\项目文件(GitLab)\\MicroService\\MicroTask\\MicroTask\\MicroTask.Project\\MicroTask.Project.csproj",
+      "projectPath": "C:\\project\\micro_service\\MicroTask\\MicroTask\\MicroTask.Project\\MicroTask.Project.csproj",
       "packagesPath": "C:\\Users\\JimmyPoor\\.nuget\\packages\\",
-      "outputPath": "E:\\项目文件(GitLab)\\MicroService\\MicroTask\\MicroTask\\MicroTask.Project\\obj\\",
+      "outputPath": "C:\\project\\micro_service\\MicroTask\\MicroTask\\MicroTask.Project\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
@@ -12773,8 +13150,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://nuget.cnblogs.com/v3/index.json": {}
+        "http://www.nuget.org/api/v2": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.0": {
@@ -12790,6 +13167,14 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
+          "Dapper": {
+            "target": "Package",
+            "version": "[1.50.4, )"
+          },
+          "Dapper.Contrib": {
+            "target": "Package",
+            "version": "[1.50.4, )"
+          },
           "IdentityModel": {
             "target": "Package",
             "version": "[3.0.0, )"
@@ -12807,6 +13192,14 @@
             "version": "[2.0.0, )",
             "autoReferenced": true
           },
+          "MySql.Data": {
+            "target": "Package",
+            "version": "[6.10.6, )"
+          },
+          "Oracle.ManagedDataAccess": {
+            "target": "Package",
+            "version": "[12.2.1100, )"
+          },
           "Pivotal.Discovery.ClientCore": {
             "target": "Package",
             "version": "[2.0.0-rc1, )"
@@ -12819,5 +13212,17 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Oracle.ManagedDataAccess 12.2.1100' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Oracle.ManagedDataAccess",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    }
+  ]
 }

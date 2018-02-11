@@ -10,8 +10,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Dapper" Version="1.50.4" />
+    <PackageReference Include="Dapper.Contrib" Version="1.50.4" />
     <PackageReference Include="IdentityModel" Version="3.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
+    <PackageReference Include="MySql.Data" Version="6.10.6" />
+    <PackageReference Include="Oracle.ManagedDataAccess" Version="12.2.1100" />
     <PackageReference Include="Pivotal.Discovery.ClientCore" Version="2.0.0-rc1" />
     <PackageReference Include="IdentityServer4.AccessTokenValidation" Version="2.3.0" />
   </ItemGroup>

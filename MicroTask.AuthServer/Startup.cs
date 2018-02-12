@@ -1,10 +1,10 @@
-﻿using IdentityServer4.Validation;
+﻿using Business;
+using IdentityServer4.Validation;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Pivotal.Discovery.Client;
-using Identity.Business;
 
 namespace Identity
 {

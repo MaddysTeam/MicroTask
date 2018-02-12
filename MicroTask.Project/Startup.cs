@@ -33,6 +33,10 @@ namespace MicroTask.Project
             .AddAuthorization()
             .AddJsonFormatters();
 
+            // add auth service
+            services.AddDiscoveryClient(Configuration);
+            services.ConfigureAuthService(Configuration);
+
             // add Cors in header,method and credentials
             services.AddCors(options=> {
                 options.AddPolicy("CorsPolicy",
@@ -42,10 +46,6 @@ namespace MicroTask.Project
                   .AllowCredentials());
             });
 
-            // add auth service
-            services.AddDiscoveryClient(Configuration);
-            services.ConfigureAuthService(Configuration);
-
             // injeciton logic repository and service for business
             services.AddTransient<IProjectRespository, ProjectRespository>();
             services.AddTransient<IProjectService, ProjectService>();
@@ -54,8 +54,8 @@ namespace MicroTask.Project
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-            // log configure
-            LogConfigure(loggerFactory);
+            // use log
+            app.UseNetCoreLogger(loggerFactory, LogType.Console, Configuration);
 
             if (env.IsDevelopment())
             {
@@ -73,14 +73,6 @@ namespace MicroTask.Project
 
             // use forbidden middleware
             app.UseForbiddenMiddleware(Configuration, loggerFactory.CreateLogger<Exception>());
-        }
-
-
-        private void LogConfigure(ILoggerFactory loggerFactory)
-        {
-            loggerFactory.
-              AddConsole(Configuration.GetSection("Logging"));
-            loggerFactory.AddDebug();
         }
 
     }

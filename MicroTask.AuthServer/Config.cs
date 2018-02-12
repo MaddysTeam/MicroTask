@@ -39,6 +39,10 @@ namespace Identity
                 {
                     //ApiSecrets = {new Secret("secret".Sha256())},
                     //UserClaims = new List<string>{"role"}
+                },
+                new ApiResource("CacheApi","CACHE API")
+                {
+
                 }
             };
         }
@@ -59,7 +63,7 @@ namespace Identity
                     {
                         new Secret("secret".Sha256())
                     },
-                    AllowedScopes = { "UserApi","ProjectApi" },
+                    AllowedScopes = { "UserApi","ProjectApi","CacheApi" },
                     AccessTokenType = AccessTokenType.Jwt
                 },
                 // for owner password by using reference token type
@@ -73,7 +77,7 @@ namespace Identity
                     AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
                     AllowOfflineAccess = true,
                     AccessTokenLifetime = accessTokenLifetime,
-                    AllowedScopes = { "UserApi","ProjectApi" },
+                    AllowedScopes = { "UserApi","ProjectApi","CacheApi"},
                     AccessTokenType = AccessTokenType.Reference
                 },
             };

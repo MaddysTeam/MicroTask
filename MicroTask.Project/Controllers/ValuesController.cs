@@ -1,7 +1,9 @@
 ﻿using Infrastructure;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Steeltoe.Common.Discovery;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace MicroTask.Project.Controllers
@@ -9,10 +11,13 @@ namespace MicroTask.Project.Controllers
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
-        private readonly DiscoveryHttpClientHandler _handler;
-        public ValuesController(IDiscoveryClient client)
+        private readonly DiscoveryHttpClientHandler handler;
+        private readonly IConfiguration config;
+
+        public ValuesController(IDiscoveryClient client,IConfiguration configuration)
         {
-            _handler = new DiscoveryHttpClientHandler(client);
+            handler = new DiscoveryHttpClientHandler(client);
+            config = configuration;
         }
 
         // GET api/values
@@ -20,6 +25,21 @@ namespace MicroTask.Project.Controllers
         [ActionLoggerFilter]
         public async Task<IEnumerable<string>> Get()
         {
+            var client = config.GetSection("Identity:Client").Value;
+            var secret = config.GetSection("Identity:Secret").Value;
+            var authority = config.GetSection("Identity:Authority").Value;
+            var cacheServiceApi = "CacheApi";
+
+            var accessTokenResponse=await AuthService.RequestAccesstokenAsync(
+                 new AuthTokenRequest(authority, client, secret, cacheServiceApi, handler)
+                 );
+
+            var httpClient = new HttpClient();
+            httpClient.SetBearerToken(accessTokenResponse.AccessToken);
+
+            var responseMessage = await httpClient.GetAsync("http://localhost:3001/redis/cache/get?key=abcd&value=dddd");
+
+            //return responseMessage;
             //throw new ProjectExcption()
             return new string[] { "value2001", "value2002" };
         }

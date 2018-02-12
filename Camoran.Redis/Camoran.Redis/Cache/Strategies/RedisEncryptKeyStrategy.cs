@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Security.Cryptography;
+using System.Text.Encodings.Web;
 
 namespace Camoran.Redis.Cache
 {
@@ -21,10 +22,10 @@ namespace Camoran.Redis.Cache
 
         protected string MD5Encrypt(string key)
         {
-            var buffer = _encoding.GetBytes(key.ToString());
+            var buffer = _encoding.GetBytes(key);
+            _md5.Key = buffer;
             var encryptKeyBytes = _md5.ComputeHash(buffer);
             var encryptKey = Encoding.ASCII.GetString(encryptKeyBytes);
-
             return encryptKey;
         }
 

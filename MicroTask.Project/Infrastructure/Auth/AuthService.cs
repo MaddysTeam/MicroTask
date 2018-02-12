@@ -21,11 +21,11 @@ namespace Infrastructure
         {
             var discoveryClient = services.BuildServiceProvider().GetService<IDiscoveryClient>();
             var handler = new DiscoveryHttpClientHandler(discoveryClient);
-            var url = configuration.GetSection("Identity:Url").Value;
+            var authority = configuration.GetSection("Identity:Authority").Value;
             var apiName = configuration.GetSection("Identity:Api").Value;
             var secret = configuration.GetSection("Identity:Secret").Value;
 
-            services.AddDiscoveryClient(configuration);
+           // services.AddDiscoveryClient(configuration);
             services.AddAuthorization();
             services.AddAuthentication(x =>
             {
@@ -36,7 +36,7 @@ namespace Infrastructure
             {
                 x.ApiName = apiName;
                 x.ApiSecret = secret;
-                x.Authority = url;
+                x.Authority = authority;
                 x.RequireHttpsMetadata = false;
                 x.JwtBackChannelHandler = handler;
                 x.IntrospectionDiscoveryHandler = handler;
@@ -60,12 +60,12 @@ namespace Infrastructure
             var response = await client.GetAsync();
             if (response.IsError)
             {
-                authTokenResponse = new AuthTokenResponse("", false, response.Error);
+               return authTokenResponse = new AuthTokenResponse("", false, response.Error);
             }
 
             // var tokenClinet = new TokenClient(response.TokenEndpoint, "client", "secret", handler);
             var tokenClinet = new TokenClient(response.TokenEndpoint, request.Client, request.Secret, clientHandler);
-            var tokenResponse = await tokenClinet.RequestClientCredentialsAsync("UserApi");
+            var tokenResponse = await tokenClinet.RequestClientCredentialsAsync(request.Api);
 
             if (tokenResponse.IsError)
             {

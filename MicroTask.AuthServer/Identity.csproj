@@ -4,13 +4,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Remove="Business\GrantStore\**" />
-    <Compile Remove="Business\NewFolder\**" />
     <Content Remove="Business\GrantStore\**" />
-    <Content Remove="Business\NewFolder\**" />
     <EmbeddedResource Remove="Business\GrantStore\**" />
-    <EmbeddedResource Remove="Business\NewFolder\**" />
     <None Remove="Business\GrantStore\**" />
-    <None Remove="Business\NewFolder\**" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="IdentityServer4" Version="2.0.2" />

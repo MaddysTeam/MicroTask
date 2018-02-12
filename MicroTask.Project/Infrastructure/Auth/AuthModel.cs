@@ -10,17 +10,19 @@ namespace Infrastructure
     public class AuthTokenRequest
     {
 
-        public AuthTokenRequest(string authority, string client, string secret, DiscoveryHttpClientHandler httpClientHandler)
+        public AuthTokenRequest(string authority, string client, string secret,string api, DiscoveryHttpClientHandler httpClientHandler)
         {
             Authority = authority;
             Client = client;
             Secret = secret;
+            Api = api;
             HttpClientHandler = httpClientHandler;
         }
 
         public string Authority { get; }
         public string Client { get; }
         public string Secret { get; }
+        public string Api { get; }
 
         /// <summary>
         /// Steeltoe discovery client handlers for spring cloud 

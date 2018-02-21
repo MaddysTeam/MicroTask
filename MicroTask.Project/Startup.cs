@@ -33,17 +33,24 @@ namespace MicroTask.Project
             .AddAuthorization()
             .AddJsonFormatters();
 
-            // add auth service
-            services.AddDiscoveryClient(Configuration);
-            services.ConfigureAuthService(Configuration);
-
             // add Cors in header,method and credentials
-            services.AddCors(options=> {
+            services.AddCors(options => {
                 options.AddPolicy("CorsPolicy",
                   builder => builder.AllowAnyOrigin()
                   .AllowAnyMethod()
                   .AllowAnyHeader()
                   .AllowCredentials());
+            });
+
+            // add auth service
+            services.AddDiscoveryClient(Configuration);
+            services.ConfigureAuthService(Configuration);
+
+            // add chole 
+            services.AddScoped(provider => {
+                string connString = Configuration.GetSection("ConnectStrings:MySql").Value;
+
+                return new Chloe.MySql.MySqlContext(new MysqlConnectionFactory(connString));
             });
 
             // injeciton logic repository and service for business

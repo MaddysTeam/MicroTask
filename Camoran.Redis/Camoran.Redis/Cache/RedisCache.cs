@@ -5,24 +5,16 @@ using System.Text;
 namespace Camoran.Redis.Cache
 {
 
-    public interface ICahceStrategy<Key, Value>
-    {
-        void Set(Key key, Value val, TimeSpan? expireTime);
-        Value Get(Key key);
-        bool Remove(Key key);
-        void SetExpire(Key key, TimeSpan expireTime);
-    }
-
-
     public class RedisCache<Key, Value>
     {
-        ICahceStrategy<Key, Value> _strategy;
+        IRedisCacheStrategy<Key, Value> _strategy;
 
-        public RedisCache() { }
-
-        public RedisCache(ICahceStrategy<Key, Value> strategy)
+        public RedisCache(IRedisCacheStrategy<Key, Value> strategy, RedisCacheConfiguration config)
         {
-            this._strategy = strategy ?? throw new RedisCacheException(ErrorInfo.STRATEGY_NOT_ALLOWED_NULL);
+            _strategy = strategy ?? throw new RedisCacheException(ErrorInfo.STRATEGY_NOT_ALLOWED_NULL);
+
+            if (config != null)
+                _strategy.SetConfig(config);
         }
 
         public virtual Value Get(Key key)
@@ -50,9 +42,9 @@ namespace Camoran.Redis.Cache
     public class RedisStringCache : RedisCache<string, string>
     {
 
-        public RedisStringCache(ICahceStrategy<string, string> strategy) : base(strategy) { }
+        public RedisStringCache(IRedisCacheStrategy<string, string> strategy, RedisCacheConfiguration config) : base(strategy, config) { }
 
-    }
+    }   
 
 
     [Serializable]

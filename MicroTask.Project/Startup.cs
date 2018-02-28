@@ -24,6 +24,10 @@ namespace MicroTask.Project
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // add auth service
+            services.AddDiscoveryClient(Configuration);
+            services.ConfigureAuthService(Configuration);
+
             // add mvc,include filters and etc..
             services.AddMvcCore(x =>
             {
@@ -32,10 +36,6 @@ namespace MicroTask.Project
             .AddControllersAsServices()
             .AddAuthorization()
             .AddJsonFormatters();
-
-            // add auth service
-            services.AddDiscoveryClient(Configuration);
-            services.ConfigureAuthService(Configuration);
 
             // add Cors in header,method and credentials
             services.AddCors(options=> {
@@ -46,6 +46,16 @@ namespace MicroTask.Project
                   .AllowCredentials());
             });
 
+            // add redis cache
+            services.AddRedisCache(Configuration);
+
+            // add redis session
+            //services.AddDistributedRedisCache(option => {
+            //    option.Configuration = Configuration.GetSection("RedisSessionSettings:conn").Value;
+            //    option.InstanceName = "master";
+            //});
+            //services.AddSession();
+
             // injeciton logic repository and service for business
             services.AddTransient<IProjectRespository, ProjectRespository>();
             services.AddTransient<IProjectService, ProjectService>();
@@ -54,6 +64,9 @@ namespace MicroTask.Project
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
+            // use session
+            // app.UseSession();
+
             // use log
             app.UseNetCoreLogger(loggerFactory, LogType.Console, Configuration);
 
@@ -61,6 +74,9 @@ namespace MicroTask.Project
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            // use authentication
+            app.UseAuthentication();
 
             // use mvc
             app.UseMvc();

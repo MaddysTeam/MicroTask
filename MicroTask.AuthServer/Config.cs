@@ -32,8 +32,8 @@ namespace Identity
             {
                 new ApiResource("ProjectApi", "PROJECT API")
                 {
-                    //ApiSecrets = {new Secret("secret".Sha256())},
-                    //UserClaims = new List<string>{"role"}
+                    ApiSecrets = {new Secret("secret".Sha256())},
+                    UserClaims = new List<string>{"role"}
                 },
                 new ApiResource("UserApi","USER API")
                 {
@@ -55,30 +55,30 @@ namespace Identity
             return new List<Client>
             {
                 // for client credentials by using jwt token type
-                new Client
-                {
-                    ClientId = "client",
-                    AllowedGrantTypes = GrantTypes.ClientCredentials,
-                    ClientSecrets =
-                    {
-                        new Secret("secret".Sha256())
-                    },
-                    AllowedScopes = { "UserApi","ProjectApi","CacheApi" },
-                    AccessTokenType = AccessTokenType.Jwt
-                },
+                //new Client
+                //{
+                //    ClientId = "client",
+                //    AllowedGrantTypes = GrantTypes.ClientCredentials,
+                //    ClientSecrets =
+                //    {
+                //        new Secret("secret".Sha256())
+                //    },
+                //    AllowedScopes = { "UserApi","ProjectApi","CacheApi" },
+                //    AccessTokenType = AccessTokenType.Jwt
+                //},
                 // for owner password by using reference token type
                 new Client
                 {
-                    ClientId = "client.reference",
+                    ClientId = "client",
+                    AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
                     ClientSecrets =
                     {
                         new Secret("secret".Sha256())
                     },
-                    AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
-                    AllowOfflineAccess = true,
-                    AccessTokenLifetime = accessTokenLifetime,
+                    //AllowOfflineAccess = true,
+                    //AccessTokenLifetime = accessTokenLifetime,
                     AllowedScopes = { "UserApi","ProjectApi","CacheApi"},
-                    AccessTokenType = AccessTokenType.Reference
+                    AccessTokenType = AccessTokenType.Jwt
                 },
             };
         }

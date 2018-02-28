@@ -41,7 +41,7 @@ namespace Infrastructure
             }
 
             context.ExceptionHandled = true;
-        }
+        }   
 
         private class ErrorMessage
         {

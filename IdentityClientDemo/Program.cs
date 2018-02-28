@@ -65,7 +65,7 @@ namespace IdentityClientDemo
             var token = "eyJhbGciOiJSUzI1NiIsImtpZCI6ImFhY2IyM2NkOTIxYjYyOGYzY2FhMjhhODBhYWI4NjRlIiwidHlwIjoiSldUIn0.eyJuYmYiOjE1MTY5MzIyNDYsImV4cCI6MTUxNjkzNTg0NiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDAwIiwiYXVkIjpbImh0dHA6Ly9sb2NhbGhvc3Q6OTAwMC9yZXNvdXJjZXMiLCJhcGkxIl0sImNsaWVudF9pZCI6InJvLmNsaWVudCIsInN1YiI6IjEiLCJhdXRoX3RpbWUiOjE1MTY5MzIyNDYsImlkcCI6ImxvY2FsIiwic2NvcGUiOlsiYXBpMSJdLCJhbXIiOlsicHdkIl19.VM_NjbXOTxJnfhNa7z8bjHYGkKMS8ne1Hu8j0BJQ5tUIZoEQXYWHkXK2uUBQ_-cq05AttnjJFGyUJsb4tWToaS_iw9Lza9VMV7vXLFBnzkhb_-RCEF1ZxXqsc2D568YV6E9Czcvo5pUm3NQTkKG5idBoQ0o9ossm-xotV1MdWbScYybzOH1Tz8NXGbeb3ane8o1HAtB_bBkKoGUyARUtuqVnPOKzj8kLYDPjXqNZvfOv9_ri_yf2kL4WSjTnecn7FRcNZvKk1R93z_ZKeO539ZSk_628_nyUxZ12GCHLt_jLYjWzj7zs7SFxnrsfiuZATbI9yowfoGGUPrDYUme-uw";
 
             var client = new HttpClient();
-            client.SetBearerToken(token);
+            
 
             var response = await client.GetAsync("http://localhost:5001/api/values");
             if (!response.IsSuccessStatusCode)

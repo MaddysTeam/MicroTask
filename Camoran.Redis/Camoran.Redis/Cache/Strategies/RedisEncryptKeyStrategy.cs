@@ -8,6 +8,16 @@ using System.Text.Encodings.Web;
 namespace Camoran.Redis.Cache
 {
 
+    public interface IRedisCacheStrategy<Key, Value>
+    {
+        void Set(Key key, Value val, TimeSpan? expireTime);
+        Value Get(Key key);
+        bool Remove(Key key);
+        void SetExpire(Key key, TimeSpan expireTime);
+        void SetConfig(RedisCacheConfiguration config);
+    }
+
+
     public class RedisEncrypt
     {
         protected EncryptType _entryptType;
@@ -42,10 +52,11 @@ namespace Camoran.Redis.Cache
     }
 
 
-    public class RedisEncryptKeyStrategy<Value> : RedisEncrypt, ICahceStrategy<string, Value>
+    public class RedisEncryptKeyStrategy<Value> : RedisEncrypt, IRedisCacheStrategy<string, Value>
     {
         RedisString _redisString;
         RedisKeys _redisKey;
+        int db;
 
         public RedisEncryptKeyStrategy(EncryptType entryptType = EncryptType.MD5)
             : base(entryptType)
@@ -58,7 +69,7 @@ namespace Camoran.Redis.Cache
         {
             var enctryptKey = MD5Encrypt(key);
 
-            return _redisString.Get<Value>(enctryptKey);
+            return _redisString.Get<Value>(enctryptKey,db);
         }
 
         public void Set(string key, Value val, TimeSpan? expireTime = null)
@@ -68,7 +79,7 @@ namespace Camoran.Redis.Cache
             {
                 var enctryptKey = MD5Encrypt(key);
 
-                _redisString.Set(enctryptKey, val);
+                _redisString.Set(enctryptKey, val,db);
 
                 if (expireTime != null)
                     SetExpire(key, expireTime.Value);
@@ -77,100 +88,106 @@ namespace Camoran.Redis.Cache
 
         public bool Remove(string key)
         {
-            return _redisKey.Del(MD5Encrypt(key));
+            return _redisKey.Del(MD5Encrypt(key),db);
         }
 
         public void SetExpire(string key, TimeSpan expireTime)
         {
-            _redisKey.Expire(key, expireTime);
+            _redisKey.Expire(key, expireTime,db);
+        }
+
+        public void SetConfig(RedisCacheConfiguration config)
+        {
+            RedisBoss.SetConnection(config.ConnectString);
+            db = config.DB;
         }
     }
 
 
-    public class RedisEncryptKeyWithSetStrategy : RedisEncrypt, ICahceStrategy<string, List<string>>
-    {
-        RedisSet _set;
-        RedisKeys _key;
+    //public class RedisEncryptKeyWithSetStrategy : RedisEncrypt, IRedisCacheStrategy<string, List<string>>
+    //{
+    //    RedisSet _set;
+    //    RedisKeys _key;
 
-        public RedisEncryptKeyWithSetStrategy(EncryptType entryptType = EncryptType.MD5)
-            : base(entryptType)
-        {
-            _set = new RedisSet();
-            _key = new RedisKeys();
-        }
+    //    public RedisEncryptKeyWithSetStrategy(EncryptType entryptType = EncryptType.MD5)
+    //        : base(entryptType)
+    //    {
+    //        _set = new RedisSet();
+    //        _key = new RedisKeys();
+    //    }
 
-        public List<string> Get(string key)
-        {
-            var enctryptKey = MD5Encrypt(key);
+    //    public List<string> Get(string key)
+    //    {
+    //        var enctryptKey = MD5Encrypt(key);
 
-            return _set.Smember(enctryptKey);
-        }
+    //        return _set.Smember(enctryptKey);
+    //    }
 
-        public void Set(string key, List<string> val, TimeSpan? expireTime = null)
-        {
-            if (val == null) return;
-            if (_entryptType == EncryptType.MD5)
-            {
-                var enctryptKey = MD5Encrypt(key);
+    //    public void Set(string key, List<string> val, TimeSpan? expireTime = null)
+    //    {
+    //        if (val == null) return;
+    //        if (_entryptType == EncryptType.MD5)
+    //        {
+    //            var enctryptKey = MD5Encrypt(key);
 
-                foreach (var i in val)
-                    _set.Sadd(enctryptKey, i); // redis set will remove duplicate values
+    //            foreach (var i in val)
+    //                _set.Sadd(enctryptKey, i); // redis set will remove duplicate values
 
-                if (expireTime != null)
-                    SetExpire(key, expireTime.Value);
-            }
-        }
+    //            if (expireTime != null)
+    //                SetExpire(key, expireTime.Value);
+    //        }
+    //    }
 
-        public bool Remove(string key)
-        {
-            return _key.Del(MD5Encrypt(key));
-        }
+    //    public bool Remove(string key)
+    //    {
+    //        return _key.Del(MD5Encrypt(key));
+    //    }
 
-        public void SetExpire(string key, TimeSpan expireTime)
-        {
-            _key.Expire(key, expireTime);
-        }
+    //    public void SetExpire(string key, TimeSpan expireTime)
+    //    {
+    //        _key.Expire(key, expireTime);
+    //    }
 
-    }
-
-
-    public class RedisEncryptKeyWithHashStrategy : RedisEncrypt, ICahceStrategy<string, Dictionary<string, string>>
-    {
-        RedisHash _hash;
-        RedisKeys _key;
-
-        public RedisEncryptKeyWithHashStrategy(EncryptType entryptType = EncryptType.MD5)
-            : base(entryptType)
-        {
-            _hash = new RedisHash();
-            _key = new RedisKeys();
-        }
-
-        public Dictionary<string, string> Get(string key)
-            => _hash.HGetAll(MD5Encrypt(key));
+    //}
 
 
-        public bool Remove(string key)
-        {
-            return _key.Del(MD5Encrypt(key));
-        }
+    //public class RedisEncryptKeyWithHashStrategy : RedisEncrypt, IRedisCacheStrategy<string, Dictionary<string, string>>
+    //{
+    //    RedisHash _hash;
+    //    RedisKeys _key;
 
-        public void Set(string key, Dictionary<string, string> val, TimeSpan? expireTime = null)
-        {
-            if (val == null) return;
-            if (_entryptType == EncryptType.MD5)
-            {
-                var enctryptKey = MD5Encrypt(key);
-                _hash.Hset(enctryptKey, val);
+    //    public RedisEncryptKeyWithHashStrategy(EncryptType entryptType = EncryptType.MD5)
+    //        : base(entryptType)
+    //    {
+    //        _hash = new RedisHash();
+    //        _key = new RedisKeys();
+    //    }
 
-                if (expireTime != null)
-                    SetExpire(enctryptKey, expireTime.Value);
-            }
-        }
+    //    public Dictionary<string, string> Get(string key)
+    //        => _hash.HGetAll(MD5Encrypt(key));
 
-        public void SetExpire(string key, TimeSpan expireTime)
-            => _key.Expire(key, expireTime);
-    }
+
+    //    public bool Remove(string key)
+    //    {
+    //        return _key.Del(MD5Encrypt(key));
+    //    }
+
+    //    public void Set(string key, Dictionary<string, string> val, TimeSpan? expireTime = null)
+    //    {
+    //        if (val == null) return;
+    //        if (_entryptType == EncryptType.MD5)
+    //        {
+    //            var enctryptKey = MD5Encrypt(key);
+    //            _hash.Hset(enctryptKey, val);
+
+    //            if (expireTime != null)
+    //                SetExpire(enctryptKey, expireTime.Value);
+    //        }
+    //    }
+
+    //    public void SetExpire(string key, TimeSpan expireTime)
+    //        => _key.Expire(key, expireTime);
+    //}
 
 }
 

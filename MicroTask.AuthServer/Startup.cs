@@ -1,4 +1,5 @@
 ﻿using Business;
+using IdentityServer4.Stores;
 using IdentityServer4.Validation;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -33,9 +34,8 @@ namespace Identity
                 .AddInMemoryPersistedGrants()
                 .AddInMemoryApiResources(config.GetApiResources())
                 .AddInMemoryClients(config.GetClients());
-          //  services.AddSingleton(ConnectionMultiplexer.Connect(redisconnectionString));
-          //  services.AddTransient<ICacheClient, RedisCacheClient>();
-          //  services.AddSingleton<IPersistedGrantStore, RedisPersistedGrantStore>();
+            services.AddSingleton<IPersistedGrantStore, RedisPersistedGrantStore>();
+            services.AddTransient<IAccountServices, AccountService>();
             services.AddTransient<IResourceOwnerPasswordValidator, ResourceOwnerPasswordValidator>();
         }
 

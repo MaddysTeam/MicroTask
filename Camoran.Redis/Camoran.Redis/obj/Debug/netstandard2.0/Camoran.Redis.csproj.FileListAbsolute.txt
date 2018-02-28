@@ -1,0 +1,16 @@
+C:\project\git\Camoran.Redis\Camoran.Redis\Camoran.Redis\bin\Debug\netstandard2.0\Camoran.Redis.deps.json
+C:\project\git\Camoran.Redis\Camoran.Redis\Camoran.Redis\bin\Debug\netstandard2.0\Camoran.Redis.dll
+C:\project\git\Camoran.Redis\Camoran.Redis\Camoran.Redis\obj\Debug\netstandard2.0\Camoran.Redis.csprojResolveAssemblyReference.cache
+C:\project\git\Camoran.Redis\Camoran.Redis\Camoran.Redis\obj\Debug\netstandard2.0\Camoran.Redis.csproj.CoreCompileInputs.cache
+C:\project\git\Camoran.Redis\Camoran.Redis\Camoran.Redis\obj\Debug\netstandard2.0\Camoran.Redis.AssemblyInfoInputs.cache
+C:\project\git\Camoran.Redis\Camoran.Redis\Camoran.Redis\obj\Debug\netstandard2.0\Camoran.Redis.AssemblyInfo.cs
+C:\project\git\Camoran.Redis\Camoran.Redis\Camoran.Redis\bin\Debug\netstandard2.0\Camoran.Redis.pdb
+C:\project\git\Camoran.Redis\Camoran.Redis\Camoran.Redis\obj\Debug\netstandard2.0\Camoran.Redis.dll
+C:\project\git\Camoran.Redis\Camoran.Redis\Camoran.Redis\obj\Debug\netstandard2.0\Camoran.Redis.pdb
+E:\project\Redis\RedisSource\Camoran.Redis\Camoran.Redis\Camoran.Redis\Camoran.Redis\bin\Debug\netstandard2.0\Camoran.Redis.deps.json
+E:\project\Redis\RedisSource\Camoran.Redis\Camoran.Redis\Camoran.Redis\Camoran.Redis\bin\Debug\netstandard2.0\Camoran.Redis.dll
+E:\project\Redis\RedisSource\Camoran.Redis\Camoran.Redis\Camoran.Redis\Camoran.Redis\bin\Debug\netstandard2.0\Camoran.Redis.pdb
+E:\project\Redis\RedisSource\Camoran.Redis\Camoran.Redis\Camoran.Redis\Camoran.Redis\obj\Debug\netstandard2.0\Camoran.Redis.csprojResolveAssemblyReference.cache
+E:\project\Redis\RedisSource\Camoran.Redis\Camoran.Redis\Camoran.Redis\Camoran.Redis\obj\Debug\netstandard2.0\Camoran.Redis.AssemblyInfo.cs
+E:\project\Redis\RedisSource\Camoran.Redis\Camoran.Redis\Camoran.Redis\Camoran.Redis\obj\Debug\netstandard2.0\Camoran.Redis.dll
+E:\project\Redis\RedisSource\Camoran.Redis\Camoran.Redis\Camoran.Redis\Camoran.Redis\obj\Debug\netstandard2.0\Camoran.Redis.pdb

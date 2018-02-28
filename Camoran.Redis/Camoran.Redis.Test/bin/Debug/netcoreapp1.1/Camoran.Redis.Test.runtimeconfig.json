@@ -1,0 +1,16 @@
+{
+  "runtimeOptions": {
+    "tfm": "netcoreapp1.1",
+    "framework": {
+      "name": "Microsoft.NETCore.App",
+      "version": "1.1.2"
+    },
+    "configProperties": {
+      "System.GC.Concurrent": true,
+      "System.GC.Server": true,
+      "System.GC.RetainVM": true,
+      "System.Threading.ThreadPool.MinThreads": 4,
+      "System.Threading.ThreadPool.MaxThreads": 125
+    }
+  }
+}

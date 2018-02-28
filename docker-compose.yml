@@ -1,0 +1,71 @@
+version: '3'
+
+services:
+  microtask.project:
+    image: microtask.project
+    build:
+      context: .
+      dockerfile: MicroTask.Project\Dockerfile
+
+  microtask.task:
+    image: microtask.task
+    build:
+      context: .
+      dockerfile: ..\MicroTask.Task\Dockerfile
+
+
+  microtask.workjournal:
+    image: microtask.workjournal
+    build:
+      context: .
+      dockerfile: MicroTask.WorkJournal\Dockerfile
+
+
+  microtask.users:
+    image: microtask.users
+    build:
+      context: .
+      dockerfile: ..\MicroTask.Users\Dockerfile
+
+
+  cache:
+    image: cache
+    build:
+      context: .
+      dockerfile: ..\Cache\Dockerfile
+
+
+  rediscache:
+    image: rediscache
+    build:
+      context: .
+      dockerfile: ..\RedisCache\Dockerfile
+
+
+  microtask.rediscache:
+    image: microtask.rediscache
+    build:
+      context: .
+      dockerfile: MicroTask.RedisCache\Dockerfile
+
+
+  microtask.worktask:
+    image: microtask.worktask
+    build:
+      context: .
+      dockerfile: ..\MicroTask.WorkTask\Dockerfile
+
+
+  configservice:
+    image: configservice
+    build:
+      context: .
+      dockerfile: ConfigService\Dockerfile
+
+
+  microtask.rediscacheservice:
+    image: microtask.rediscacheservice
+    build:
+      context: .
+      dockerfile: ..\MicroTask.RedisCacheService\Dockerfile
+

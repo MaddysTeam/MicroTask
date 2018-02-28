@@ -5,7 +5,12 @@ using System.Threading.Tasks;
 
 namespace Business
 {
-    public class ProjectService : IProjectService
+
+    public interface IProjectService
     {
+        bool AddProject(Project p);
+        Project GetProjectById(string id);
+        List<Project> GetProjectByName(string name);
     }
+
 }

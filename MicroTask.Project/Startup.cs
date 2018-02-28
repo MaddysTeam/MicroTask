@@ -38,7 +38,7 @@ namespace MicroTask.Project
             .AddJsonFormatters();
 
             // add Cors in header,method and credentials
-            services.AddCors(options=> {
+            services.AddCors(options => {
                 options.AddPolicy("CorsPolicy",
                   builder => builder.AllowAnyOrigin()
                   .AllowAnyMethod()
@@ -46,6 +46,7 @@ namespace MicroTask.Project
                   .AllowCredentials());
             });
 
+<<<<<<< HEAD
             // add redis cache
             services.AddRedisCache(Configuration);
 
@@ -55,6 +56,18 @@ namespace MicroTask.Project
             //    option.InstanceName = "master";
             //});
             //services.AddSession();
+=======
+            // add auth service
+            services.AddDiscoveryClient(Configuration);
+            services.ConfigureAuthService(Configuration);
+
+            // add chole 
+            services.AddScoped(provider => {
+                string connString = Configuration.GetSection("ConnectStrings:MySql").Value;
+
+                return new Chloe.MySql.MySqlContext(new MysqlConnectionFactory(connString));
+            });
+>>>>>>> 278b165bb380ca9f49c35c7c140860fa2b897ab5
 
             // injeciton logic repository and service for business
             services.AddTransient<IProjectRespository, ProjectRespository>();

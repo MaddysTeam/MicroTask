@@ -7,10 +7,13 @@
 
   <ItemGroup>
     <Folder Include="Infrastructure\Logger\log4net\" />
+    <Folder Include="Infrastructure\Orms\dapper\paginaiton\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Chloe" Version="2.24.0" />
+    <PackageReference Include="Chloe.MySql" Version="2.24.0" />
     <PackageReference Include="Dapper" Version="1.50.4" />
     <PackageReference Include="Dapper.Contrib" Version="1.50.4" />
     <PackageReference Include="IdentityModel" Version="3.0.0" />
@@ -28,7 +31,10 @@
   </ItemGroup>
 
   <ItemGroup>
+<<<<<<< HEAD
     <ProjectReference Include="..\Camoran.Redis\Camoran.Redis\Camoran.Redis.csproj" />
+=======
+>>>>>>> 278b165bb380ca9f49c35c7c140860fa2b897ab5
     <ProjectReference Include="..\Common\Common.csproj" />
   </ItemGroup>
 

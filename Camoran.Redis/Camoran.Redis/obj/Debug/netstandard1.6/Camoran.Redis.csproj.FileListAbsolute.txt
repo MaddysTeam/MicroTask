@@ -34,3 +34,14 @@ E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\Camoran.Redis\Camoran.R
 E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\Camoran.Redis\Camoran.Redis\obj\Debug\netstandard1.6\Camoran.Redis.AssemblyInfo.cs
 E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\Camoran.Redis\Camoran.Redis\obj\Debug\netstandard1.6\Camoran.Redis.dll
 E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\Camoran.Redis\Camoran.Redis\obj\Debug\netstandard1.6\Camoran.Redis.pdb
+C:\project\micro_service\MicroTask\Camoran.Redis\Camoran.Redis\bin\Debug\netstandard1.6\Camoran.Redis.deps.json
+C:\project\micro_service\MicroTask\Camoran.Redis\Camoran.Redis\bin\Debug\netstandard1.6\Camoran.Redis.dll
+C:\project\micro_service\MicroTask\Camoran.Redis\Camoran.Redis\bin\Debug\netstandard1.6\Camoran.Redis.pdb
+C:\project\micro_service\MicroTask\Camoran.Redis\Camoran.Redis\bin\Debug\netstandard1.6\System.Text.Encodings.Web.dll
+C:\project\micro_service\MicroTask\Camoran.Redis\Camoran.Redis\bin\Debug\netstandard1.6\System.Text.Encodings.Web.xml
+C:\project\micro_service\MicroTask\Camoran.Redis\Camoran.Redis\obj\Debug\netstandard1.6\Camoran.Redis.csprojResolveAssemblyReference.cache
+C:\project\micro_service\MicroTask\Camoran.Redis\Camoran.Redis\obj\Debug\netstandard1.6\Camoran.Redis.csproj.CoreCompileInputs.cache
+C:\project\micro_service\MicroTask\Camoran.Redis\Camoran.Redis\obj\Debug\netstandard1.6\Camoran.Redis.AssemblyInfoInputs.cache
+C:\project\micro_service\MicroTask\Camoran.Redis\Camoran.Redis\obj\Debug\netstandard1.6\Camoran.Redis.AssemblyInfo.cs
+C:\project\micro_service\MicroTask\Camoran.Redis\Camoran.Redis\obj\Debug\netstandard1.6\Camoran.Redis.dll
+C:\project\micro_service\MicroTask\Camoran.Redis\Camoran.Redis\obj\Debug\netstandard1.6\Camoran.Redis.pdb

@@ -20,3 +20,14 @@ E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\ConfigService\obj\Debug
 C:\project\micro_service\MicroTask\MicroTask\ConfigService\bin\Debug\netcoreapp1.1\ConfigService.pdb
 C:\project\micro_service\MicroTask\MicroTask\ConfigService\obj\Debug\netcoreapp1.1\ConfigService.dll
 C:\project\micro_service\MicroTask\MicroTask\ConfigService\obj\Debug\netcoreapp1.1\ConfigService.pdb
+C:\project\micro_service\MicroTask\ConfigService\bin\Debug\netcoreapp1.1\ConfigService.deps.json
+C:\project\micro_service\MicroTask\ConfigService\bin\Debug\netcoreapp1.1\ConfigService.runtimeconfig.json
+C:\project\micro_service\MicroTask\ConfigService\bin\Debug\netcoreapp1.1\ConfigService.runtimeconfig.dev.json
+C:\project\micro_service\MicroTask\ConfigService\bin\Debug\netcoreapp1.1\ConfigService.dll
+C:\project\micro_service\MicroTask\ConfigService\bin\Debug\netcoreapp1.1\ConfigService.pdb
+C:\project\micro_service\MicroTask\ConfigService\obj\Debug\netcoreapp1.1\ConfigService.csprojResolveAssemblyReference.cache
+C:\project\micro_service\MicroTask\ConfigService\obj\Debug\netcoreapp1.1\ConfigService.csproj.CoreCompileInputs.cache
+C:\project\micro_service\MicroTask\ConfigService\obj\Debug\netcoreapp1.1\ConfigService.AssemblyInfoInputs.cache
+C:\project\micro_service\MicroTask\ConfigService\obj\Debug\netcoreapp1.1\ConfigService.AssemblyInfo.cs
+C:\project\micro_service\MicroTask\ConfigService\obj\Debug\netcoreapp1.1\ConfigService.dll
+C:\project\micro_service\MicroTask\ConfigService\obj\Debug\netcoreapp1.1\ConfigService.pdb

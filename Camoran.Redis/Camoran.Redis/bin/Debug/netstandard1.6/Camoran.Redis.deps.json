@@ -11,7 +11,8 @@
         "dependencies": {
           "NETStandard.Library": "1.6.1",
           "Newtonsoft.Json": "10.0.3",
-          "StackExchange.Redis": "1.2.6"
+          "StackExchange.Redis": "1.2.6",
+          "System.Text.Encodings.Web": "4.0.2.0"
         },
         "runtime": {
           "Camoran.Redis.dll": {}
@@ -1058,6 +1059,11 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlDocument.dll": {}
         }
+      },
+      "System.Text.Encodings.Web/4.0.2.0": {
+        "runtime": {
+          "System.Text.Encodings.Web.dll": {}
+        }
       }
     }
   },
@@ -1717,6 +1723,11 @@
       "sha512": "sha512-lJ8AxvkX7GQxpC6GFCeBj8ThYVyQczx2+f/cWHJU8tjS7YfI6Cv6bon70jVEgs2CiFbmmM8b9j1oZVx0dSI2Ww==",
       "path": "system.xml.xmldocument/4.3.0",
       "hashPath": "system.xml.xmldocument.4.3.0.nupkg.sha512"
+    },
+    "System.Text.Encodings.Web/4.0.2.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

@@ -31,10 +31,7 @@
   </ItemGroup>
 
   <ItemGroup>
-<<<<<<< HEAD
     <ProjectReference Include="..\Camoran.Redis\Camoran.Redis\Camoran.Redis.csproj" />
-=======
->>>>>>> 278b165bb380ca9f49c35c7c140860fa2b897ab5
     <ProjectReference Include="..\Common\Common.csproj" />
   </ItemGroup>
 

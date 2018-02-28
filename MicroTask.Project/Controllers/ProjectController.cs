@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Common;
 using Chloe.MySql;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Controllers
 {
@@ -19,25 +20,12 @@ namespace Controllers
             this.projectService = projectService;
         }
 
-<<<<<<< HEAD
-        // GET api/values
         [Authorize(Roles ="admin")]
         [Route("admin")]
         [HttpGet]
         public async Task<IEnumerable<string>> Get()
         {
             return new string[] { "value1", "value2" };
-        }
-
-        // POST parent/regist
-=======
-        // GET project/values/all
->>>>>>> 278b165bb380ca9f49c35c7c140860fa2b897ab5
-        [HttpPost]
-        [Route("all")]
-        public async Task<IEnumerable<Project>> Get()
-        {
-            return null; //new string[] { "value1", "value2" };
         }
 
         // POST project/edit

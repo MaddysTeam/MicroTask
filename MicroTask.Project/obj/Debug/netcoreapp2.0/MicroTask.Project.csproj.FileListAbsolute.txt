@@ -1,34 +1,3 @@
-C:\project\micro_service\MicroTask\MicroTask\MicroTask.Project\bin\Debug\netcoreapp2.0\MicroTask.Project.deps.json
-C:\project\micro_service\MicroTask\MicroTask\MicroTask.Project\bin\Debug\netcoreapp2.0\MicroTask.Project.runtimeconfig.json
-C:\project\micro_service\MicroTask\MicroTask\MicroTask.Project\bin\Debug\netcoreapp2.0\MicroTask.Project.runtimeconfig.dev.json
-C:\project\micro_service\MicroTask\MicroTask\MicroTask.Project\bin\Debug\netcoreapp2.0\MicroTask.Project.dll
-C:\project\micro_service\MicroTask\MicroTask\MicroTask.Project\bin\Debug\netcoreapp2.0\MicroTask.Project.pdb
-C:\project\micro_service\MicroTask\MicroTask\MicroTask.Project\obj\Debug\netcoreapp2.0\MicroTask.Project.csprojResolveAssemblyReference.cache
-C:\project\micro_service\MicroTask\MicroTask\MicroTask.Project\obj\Debug\netcoreapp2.0\MicroTask.Project.csproj.CoreCompileInputs.cache
-C:\project\micro_service\MicroTask\MicroTask\MicroTask.Project\obj\Debug\netcoreapp2.0\MicroTask.Project.AssemblyInfoInputs.cache
-C:\project\micro_service\MicroTask\MicroTask\MicroTask.Project\obj\Debug\netcoreapp2.0\MicroTask.Project.AssemblyInfo.cs
-C:\project\micro_service\MicroTask\MicroTask\MicroTask.Project\obj\Debug\netcoreapp2.0\MicroTask.Project.dll
-C:\project\micro_service\MicroTask\MicroTask\MicroTask.Project\obj\Debug\netcoreapp2.0\MicroTask.Project.pdb
-E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Project\bin\Debug\netcoreapp2.0\MicroTask.Project.deps.json
-E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Project\bin\Debug\netcoreapp2.0\MicroTask.Project.runtimeconfig.json
-E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Project\bin\Debug\netcoreapp2.0\MicroTask.Project.runtimeconfig.dev.json
-E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Project\bin\Debug\netcoreapp2.0\MicroTask.Project.dll
-E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Project\bin\Debug\netcoreapp2.0\MicroTask.Project.pdb
-E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Project\obj\Debug\netcoreapp2.0\MicroTask.Project.csprojResolveAssemblyReference.cache
-E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Project\obj\Debug\netcoreapp2.0\MicroTask.Project.csproj.CoreCompileInputs.cache
-E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Project\obj\Debug\netcoreapp2.0\MicroTask.Project.AssemblyInfoInputs.cache
-E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Project\obj\Debug\netcoreapp2.0\MicroTask.Project.AssemblyInfo.cs
-E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Project\obj\Debug\netcoreapp2.0\MicroTask.Project.dll
-E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Project\obj\Debug\netcoreapp2.0\MicroTask.Project.pdb
-<<<<<<< HEAD
-E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Project\bin\Debug\netcoreapp2.0\Camoran.Redis.dll
-E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Project\bin\Debug\netcoreapp2.0\Common.dll
-E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Project\bin\Debug\netcoreapp2.0\Camoran.Redis.pdb
-E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Project\bin\Debug\netcoreapp2.0\Common.pdb
-=======
-C:\project\micro_service\MicroTask\MicroTask\MicroTask.Project\bin\Debug\netcoreapp2.0\Common.dll
-C:\project\micro_service\MicroTask\MicroTask\MicroTask.Project\bin\Debug\netcoreapp2.0\Common.pdb
->>>>>>> 278b165bb380ca9f49c35c7c140860fa2b897ab5
 C:\project\micro_service\MicroTask\MicroTask.Project\bin\Debug\netcoreapp2.0\MicroTask.Project.deps.json
 C:\project\micro_service\MicroTask\MicroTask.Project\bin\Debug\netcoreapp2.0\MicroTask.Project.runtimeconfig.json
 C:\project\micro_service\MicroTask\MicroTask.Project\bin\Debug\netcoreapp2.0\MicroTask.Project.runtimeconfig.dev.json

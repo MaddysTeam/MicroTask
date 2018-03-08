@@ -12,6 +12,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="App.Metrics" Version="1.3.0" />
+    <PackageReference Include="App.Metrics.Extensions.Middleware" Version="1.2.1" />
+    <PackageReference Include="App.Metrics.Extensions.Mvc" Version="1.2.1" />
+    <PackageReference Include="App.Metrics.Extensions.Reporting.InfluxDB" Version="1.2.0" />
+    <PackageReference Include="App.Metrics.Formatters.Json" Version="1.2.0" />
     <PackageReference Include="Chloe" Version="2.24.0" />
     <PackageReference Include="Chloe.MySql" Version="2.24.0" />
     <PackageReference Include="Dapper" Version="1.50.4" />

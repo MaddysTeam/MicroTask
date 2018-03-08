@@ -24,3 +24,4 @@ C:\project\micro_service\MicroTask\MicroTask.HealthCheck\obj\Debug\netstandard2.
 C:\project\micro_service\MicroTask\MicroTask.HealthCheck\obj\Debug\netstandard2.0\MicroTask.HealthCheck.AssemblyInfo.cs
 C:\project\micro_service\MicroTask\MicroTask.HealthCheck\obj\Debug\netstandard2.0\MicroTask.HealthCheck.dll
 C:\project\micro_service\MicroTask\MicroTask.HealthCheck\obj\Debug\netstandard2.0\MicroTask.HealthCheck.pdb
+C:\project\micro_service\MicroTask\MicroTask.HealthCheck\obj\Debug\netstandard2.0\MicroTask.HealthCheck.csprojResolveAssemblyReference.cache

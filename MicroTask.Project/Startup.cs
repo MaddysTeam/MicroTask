@@ -24,6 +24,7 @@ namespace MicroTask.Project
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddHealthConfigurationByMetrics(Configuration);
             // add auth service
             services.AddDiscoveryClient(Configuration);
             services.ConfigureAuthService(Configuration);
@@ -56,16 +57,8 @@ namespace MicroTask.Project
             //});
             //services.AddSession();
 
-            // add auth service
-            services.AddDiscoveryClient(Configuration);
-            services.ConfigureAuthService(Configuration);
-
-            // add chole 
-            services.AddScoped(provider => {
-                string connString = Configuration.GetSection("ConnectStrings:MySql").Value;
-
-                return new Chloe.MySql.MySqlContext(new MysqlConnectionFactory(connString));
-            });
+            // add chole orm 
+            services.AddChloeWithMySQL(Configuration);
 
             // injeciton logic repository and service for business
             services.AddTransient<IProjectRespository, ProjectRespository>();
@@ -73,13 +66,16 @@ namespace MicroTask.Project
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory,IApplicationLifetime lifeTime)
         {
             // use session
             // app.UseSession();
 
             // use log
             app.UseNetCoreLogger(loggerFactory, LogType.Console, Configuration);
+
+            // use health check by app metrics
+            app.UseHealthConfigurationByMetrics(lifeTime);
 
             if (env.IsDevelopment())
             {

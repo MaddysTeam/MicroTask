@@ -30,3 +30,4 @@ C:\project\micro_service\MicroTask\IdentityClientDemo\obj\Debug\netcoreapp2.0\Id
 C:\project\micro_service\MicroTask\IdentityClientDemo\obj\Debug\netcoreapp2.0\IdentityClientDemo.AssemblyInfo.cs
 C:\project\micro_service\MicroTask\IdentityClientDemo\obj\Debug\netcoreapp2.0\IdentityClientDemo.dll
 C:\project\micro_service\MicroTask\IdentityClientDemo\obj\Debug\netcoreapp2.0\IdentityClientDemo.pdb
+C:\project\micro_service\MicroTask\IdentityClientDemo\obj\Debug\netcoreapp2.0\IdentityClientDemo.csprojResolveAssemblyReference.cache

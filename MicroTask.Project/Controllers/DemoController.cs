@@ -30,9 +30,9 @@ namespace MicroTask.Project.Controllers
 
         // GET api/values
         [HttpGet]
+        [Route("parent/demo")]
         public async Task<IEnumerable<string>> Get()
         {
-           
             return new string[] { "value1", "value2" };
         }
 

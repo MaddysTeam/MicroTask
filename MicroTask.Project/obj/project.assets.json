@@ -2,6 +2,114 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
+      "App.Metrics/1.3.0": {
+        "type": "package",
+        "dependencies": {
+          "App.Metrics.Concurrency": "1.2.0",
+          "Microsoft.Extensions.DependencyModel": "1.1.1",
+          "Microsoft.Extensions.Logging.Abstractions": "1.1.1",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "1.1.1",
+          "Microsoft.Extensions.PlatformAbstractions": "1.1.0",
+          "NETStandard.Library": "1.6.1",
+          "System.Collections.Specialized": "4.3.0",
+          "System.Diagnostics.Process": "4.3.0",
+          "System.Net.NameResolution": "4.3.0",
+          "System.Net.Ping": "4.3.0",
+          "System.Threading.Thread": "4.3.0",
+          "System.ValueTuple": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.6/App.Metrics.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/App.Metrics.dll": {}
+        }
+      },
+      "App.Metrics.Concurrency/1.2.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "System.Threading.Thread": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.6/App.Metrics.Concurrency.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/App.Metrics.Concurrency.dll": {}
+        }
+      },
+      "App.Metrics.Extensions.Middleware/1.2.1": {
+        "type": "package",
+        "dependencies": {
+          "App.Metrics": "1.3.0",
+          "Microsoft.AspNetCore.Hosting": "1.1.1",
+          "Microsoft.AspNetCore.Routing": "1.1.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.6/App.Metrics.Extensions.Middleware.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/App.Metrics.Extensions.Middleware.dll": {}
+        }
+      },
+      "App.Metrics.Extensions.Mvc/1.2.1": {
+        "type": "package",
+        "dependencies": {
+          "App.Metrics.Extensions.Middleware": "1.2.1",
+          "Microsoft.AspNetCore.Mvc": "1.1.2",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.6/App.Metrics.Extensions.Mvc.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/App.Metrics.Extensions.Mvc.dll": {}
+        }
+      },
+      "App.Metrics.Extensions.Reporting.InfluxDB/1.2.0": {
+        "type": "package",
+        "dependencies": {
+          "App.Metrics": "1.2.0",
+          "App.Metrics.Formatting.InfluxDB": "1.0.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.6/App.Metrics.Extensions.Reporting.InfluxDB.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/App.Metrics.Extensions.Reporting.InfluxDB.dll": {}
+        }
+      },
+      "App.Metrics.Formatters.Json/1.2.0": {
+        "type": "package",
+        "dependencies": {
+          "App.Metrics": "1.2.0",
+          "App.Metrics.Extensions.Middleware": "1.2.0",
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.6/App.Metrics.Formatters.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/App.Metrics.Formatters.Json.dll": {}
+        }
+      },
+      "App.Metrics.Formatting.InfluxDB/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "App.Metrics": "1.2.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.6/App.Metrics.Formatting.InfluxDB.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/App.Metrics.Formatting.InfluxDB.dll": {}
+        }
+      },
       "Chloe/2.24.0": {
         "type": "package",
         "dependencies": {
@@ -3688,6 +3796,49 @@
           }
         }
       },
+      "System.Diagnostics.Process/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.Win32.Primitives": "4.3.0",
+          "Microsoft.Win32.Registry": "4.3.0",
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.IO": "4.3.0",
+          "System.IO.FileSystem": "4.3.0",
+          "System.IO.FileSystem.Primitives": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Runtime.Handles": "4.3.0",
+          "System.Runtime.InteropServices": "4.3.0",
+          "System.Text.Encoding": "4.3.0",
+          "System.Text.Encoding.Extensions": "4.3.0",
+          "System.Threading": "4.3.0",
+          "System.Threading.Tasks": "4.3.0",
+          "System.Threading.Thread": "4.3.0",
+          "System.Threading.ThreadPool": "4.3.0",
+          "runtime.native.System": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.4/System.Diagnostics.Process.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/linux/lib/netstandard1.4/System.Diagnostics.Process.dll": {
+            "assetType": "runtime",
+            "rid": "linux"
+          },
+          "runtimes/osx/lib/netstandard1.4/System.Diagnostics.Process.dll": {
+            "assetType": "runtime",
+            "rid": "osx"
+          },
+          "runtimes/win/lib/netstandard1.4/System.Diagnostics.Process.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "System.Diagnostics.StackTrace/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -4029,6 +4180,45 @@
             "rid": "unix"
           },
           "runtimes/win/lib/netstandard1.3/System.Net.NameResolution.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.Net.Ping/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.Win32.Primitives": "4.3.0",
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Diagnostics.Process": "4.3.0",
+          "System.Diagnostics.Tracing": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.IO": "4.3.0",
+          "System.IO.FileSystem": "4.3.0",
+          "System.Net.NameResolution": "4.3.0",
+          "System.Net.Primitives": "4.3.0",
+          "System.Net.Sockets": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Runtime.Handles": "4.3.0",
+          "System.Runtime.InteropServices": "4.3.0",
+          "System.Threading": "4.3.0",
+          "System.Threading.Tasks": "4.3.0",
+          "System.Threading.ThreadPool": "4.3.0",
+          "runtime.native.System": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.3/System.Net.Ping.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netstandard1.3/System.Net.Ping.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.3/System.Net.Ping.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -5130,6 +5320,97 @@
     }
   },
   "libraries": {
+    "App.Metrics/1.3.0": {
+      "sha512": "/rF3ifhH8JEVmd+EJ7rWuELNOJuMeKnqs6XSoMQ9c00387g8zkgcxUi5yLsvTOhJhczRhcO+DUDlqKumXG9A2Q==",
+      "type": "package",
+      "path": "app.metrics/1.3.0",
+      "files": [
+        "app.metrics.1.3.0.nupkg.sha512",
+        "app.metrics.nuspec",
+        "lib/net452/App.Metrics.dll",
+        "lib/net452/App.Metrics.xml",
+        "lib/netstandard1.6/App.Metrics.dll",
+        "lib/netstandard1.6/App.Metrics.xml"
+      ]
+    },
+    "App.Metrics.Concurrency/1.2.0": {
+      "sha512": "aMSDyxlqE0Q2pg9yjIFhpEetss5Rxi2iYkAyonptVunBIvCyA7UzBXd4CJVt0/APjrjwisOIJJG+DxjeMRrQiw==",
+      "type": "package",
+      "path": "app.metrics.concurrency/1.2.0",
+      "files": [
+        "app.metrics.concurrency.1.2.0.nupkg.sha512",
+        "app.metrics.concurrency.nuspec",
+        "lib/net45/App.Metrics.Concurrency.dll",
+        "lib/net45/App.Metrics.Concurrency.xml",
+        "lib/netstandard1.6/App.Metrics.Concurrency.dll",
+        "lib/netstandard1.6/App.Metrics.Concurrency.xml"
+      ]
+    },
+    "App.Metrics.Extensions.Middleware/1.2.1": {
+      "sha512": "dxgu3h0GVi6d0z96fDqSBb8Vg6NAtA0BGiz3GROtJtZCeXHHowMJUpPKIMiiPJc44FQMs+HbOd0XxfnmrDy+Cw==",
+      "type": "package",
+      "path": "app.metrics.extensions.middleware/1.2.1",
+      "files": [
+        "app.metrics.extensions.middleware.1.2.1.nupkg.sha512",
+        "app.metrics.extensions.middleware.nuspec",
+        "lib/net461/App.Metrics.Extensions.Middleware.dll",
+        "lib/net461/App.Metrics.Extensions.Middleware.xml",
+        "lib/netstandard1.6/App.Metrics.Extensions.Middleware.dll",
+        "lib/netstandard1.6/App.Metrics.Extensions.Middleware.xml"
+      ]
+    },
+    "App.Metrics.Extensions.Mvc/1.2.1": {
+      "sha512": "GgheTg2Vk9Ols7XnGGuCKSJ1x/mV8lwtSE2LXcSi6F7G8/SpEaNULxKqrqu11LHRI0+Jjp6J/iZXZB1VsCfztw==",
+      "type": "package",
+      "path": "app.metrics.extensions.mvc/1.2.1",
+      "files": [
+        "app.metrics.extensions.mvc.1.2.1.nupkg.sha512",
+        "app.metrics.extensions.mvc.nuspec",
+        "lib/net461/App.Metrics.Extensions.Mvc.dll",
+        "lib/net461/App.Metrics.Extensions.Mvc.xml",
+        "lib/netstandard1.6/App.Metrics.Extensions.Mvc.dll",
+        "lib/netstandard1.6/App.Metrics.Extensions.Mvc.xml"
+      ]
+    },
+    "App.Metrics.Extensions.Reporting.InfluxDB/1.2.0": {
+      "sha512": "th53KaYn4Wn8fvT9kDSLD5bayz85D15OittmXdOsgLoNRrg8YefGpEPcfUe8rHMhc5TPnipCBNPHqgudBmLtIw==",
+      "type": "package",
+      "path": "app.metrics.extensions.reporting.influxdb/1.2.0",
+      "files": [
+        "app.metrics.extensions.reporting.influxdb.1.2.0.nupkg.sha512",
+        "app.metrics.extensions.reporting.influxdb.nuspec",
+        "lib/net452/App.Metrics.Extensions.Reporting.InfluxDB.dll",
+        "lib/net452/App.Metrics.Extensions.Reporting.InfluxDB.xml",
+        "lib/netstandard1.6/App.Metrics.Extensions.Reporting.InfluxDB.dll",
+        "lib/netstandard1.6/App.Metrics.Extensions.Reporting.InfluxDB.xml"
+      ]
+    },
+    "App.Metrics.Formatters.Json/1.2.0": {
+      "sha512": "0Qs/kl9fzOlm9Hi51UQCMkf3LwwrxZOG0NCRE0+zR/6APnANTTHZMgC12NrvfCXWi4RqAfXWOVbhEgPIekWTQw==",
+      "type": "package",
+      "path": "app.metrics.formatters.json/1.2.0",
+      "files": [
+        "app.metrics.formatters.json.1.2.0.nupkg.sha512",
+        "app.metrics.formatters.json.nuspec",
+        "lib/net461/App.Metrics.Formatters.Json.dll",
+        "lib/net461/App.Metrics.Formatters.Json.xml",
+        "lib/netstandard1.6/App.Metrics.Formatters.Json.dll",
+        "lib/netstandard1.6/App.Metrics.Formatters.Json.xml"
+      ]
+    },
+    "App.Metrics.Formatting.InfluxDB/1.0.0": {
+      "sha512": "wWHigRiJAVtOoB5iJOvP0DPpZrbn/JXTQ6B/CxpxxYSfrQh6pqJRa/g0T/l8OX3NM6Jabe/84F5YjM0dEffSTw==",
+      "type": "package",
+      "path": "app.metrics.formatting.influxdb/1.0.0",
+      "files": [
+        "app.metrics.formatting.influxdb.1.0.0.nupkg.sha512",
+        "app.metrics.formatting.influxdb.nuspec",
+        "lib/net452/App.Metrics.Formatting.InfluxDB.dll",
+        "lib/net452/App.Metrics.Formatting.InfluxDB.xml",
+        "lib/netstandard1.6/App.Metrics.Formatting.InfluxDB.dll",
+        "lib/netstandard1.6/App.Metrics.Formatting.InfluxDB.xml"
+      ]
+    },
     "Chloe/2.24.0": {
       "sha512": "KyV0IEv9Y172di6bMOGN8WqSzMb1z9U6xUIHgOPTepgLIM1LV38F2hE5gUl8zrzbdJiddNyDQq4VT0C8jiroIw==",
       "type": "package",
@@ -9508,6 +9789,61 @@
         "system.diagnostics.fileversioninfo.nuspec"
       ]
     },
+    "System.Diagnostics.Process/4.3.0": {
+      "sha512": "ElMvEskh9/qYLT70l4+40VUDIvt7z7q3pWgz0yq93zyGE2wQrgYN170+lrbS9n1dTVyH2fsQNBJ81dUGQK8hmQ==",
+      "type": "package",
+      "path": "system.diagnostics.process/4.3.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Diagnostics.Process.dll",
+        "lib/net461/System.Diagnostics.Process.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Diagnostics.Process.dll",
+        "ref/net461/System.Diagnostics.Process.dll",
+        "ref/netstandard1.3/System.Diagnostics.Process.dll",
+        "ref/netstandard1.3/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/de/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/es/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/fr/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/it/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/ja/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/ko/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/ru/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/zh-hans/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/zh-hant/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/System.Diagnostics.Process.dll",
+        "ref/netstandard1.4/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/de/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/es/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/fr/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/it/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/ja/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/ko/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/ru/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/zh-hans/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/zh-hant/System.Diagnostics.Process.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/linux/lib/netstandard1.4/System.Diagnostics.Process.dll",
+        "runtimes/osx/lib/netstandard1.4/System.Diagnostics.Process.dll",
+        "runtimes/win/lib/net46/System.Diagnostics.Process.dll",
+        "runtimes/win/lib/net461/System.Diagnostics.Process.dll",
+        "runtimes/win/lib/netstandard1.4/System.Diagnostics.Process.dll",
+        "runtimes/win7/lib/netcore50/_._",
+        "system.diagnostics.process.4.3.0.nupkg.sha512",
+        "system.diagnostics.process.nuspec"
+      ]
+    },
     "System.Diagnostics.StackTrace/4.3.0": {
       "sha512": "ebIecQ2eLt/HVlkE4MBVAG7e5kyej5wfgMzbKHwnWOsBDl3kNG/soWcesT+DcOpGmZVKD4l0Xacjg70ypwOtgA==",
       "type": "package",
@@ -10439,6 +10775,36 @@
         "runtimes/win/lib/net46/System.Net.NameResolution.dll",
         "runtimes/win/lib/netcore50/System.Net.NameResolution.dll",
         "runtimes/win/lib/netstandard1.3/System.Net.NameResolution.dll"
+      ]
+    },
+    "System.Net.Ping/4.3.0": {
+      "sha512": "XwY4ozt8PFAMEov5QdXWla3R6U7LiLAVGnjFVWbN0MfQxS7p4PmYBOaD5TwPa7qatU1IUeIO9fJOGGSdqSeG5A==",
+      "type": "package",
+      "path": "system.net.ping/4.3.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Net.Ping.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Net.Ping.dll",
+        "ref/netstandard1.3/System.Net.Ping.dll",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/unix/lib/netstandard1.3/System.Net.Ping.dll",
+        "runtimes/win/lib/net46/System.Net.Ping.dll",
+        "runtimes/win/lib/netstandard1.3/System.Net.Ping.dll",
+        "runtimes/win7/lib/netcore50/_._",
+        "system.net.ping.4.3.0.nupkg.sha512",
+        "system.net.ping.nuspec"
       ]
     },
     "System.Net.Primitives/4.3.0": {
@@ -13276,6 +13642,11 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
+      "App.Metrics >= 1.3.0",
+      "App.Metrics.Extensions.Middleware >= 1.2.1",
+      "App.Metrics.Extensions.Mvc >= 1.2.1",
+      "App.Metrics.Extensions.Reporting.InfluxDB >= 1.2.0",
+      "App.Metrics.Formatters.Json >= 1.2.0",
       "Camoran.Redis >= 1.0.0",
       "Chloe >= 2.24.0",
       "Chloe.MySql >= 2.24.0",
@@ -13348,6 +13719,26 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
+          "App.Metrics": {
+            "target": "Package",
+            "version": "[1.3.0, )"
+          },
+          "App.Metrics.Extensions.Middleware": {
+            "target": "Package",
+            "version": "[1.2.1, )"
+          },
+          "App.Metrics.Extensions.Mvc": {
+            "target": "Package",
+            "version": "[1.2.1, )"
+          },
+          "App.Metrics.Extensions.Reporting.InfluxDB": {
+            "target": "Package",
+            "version": "[1.2.0, )"
+          },
+          "App.Metrics.Formatters.Json": {
+            "target": "Package",
+            "version": "[1.2.0, )"
+          },
           "Chloe": {
             "target": "Package",
             "version": "[2.24.0, )"

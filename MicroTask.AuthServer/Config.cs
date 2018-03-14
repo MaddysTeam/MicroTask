@@ -57,7 +57,7 @@ namespace Identity
                 // for client credentials by using jwt token type
                 //new Client
                 //{
-                //    ClientId = "client",
+                //    ClientId = "client",E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.AuthServer\Program.cs
                 //    AllowedGrantTypes = GrantTypes.ClientCredentials,
                 //    ClientSecrets =
                 //    {

@@ -1,0 +1,15 @@
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Task\bin\Debug\netcoreapp2.0\MicroTask.Task.deps.json
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Task\bin\Debug\netcoreapp2.0\MicroTask.Task.runtimeconfig.json
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Task\bin\Debug\netcoreapp2.0\MicroTask.Task.runtimeconfig.dev.json
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Task\bin\Debug\netcoreapp2.0\MicroTask.Task.dll
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Task\bin\Debug\netcoreapp2.0\MicroTask.Task.pdb
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Task\bin\Debug\netcoreapp2.0\Camoran.Redis.dll
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Task\bin\Debug\netcoreapp2.0\Common.dll
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Task\bin\Debug\netcoreapp2.0\Camoran.Redis.pdb
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Task\bin\Debug\netcoreapp2.0\Common.pdb
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Task\obj\Debug\netcoreapp2.0\MicroTask.Task.csprojResolveAssemblyReference.cache
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Task\obj\Debug\netcoreapp2.0\MicroTask.Task.csproj.CoreCompileInputs.cache
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Task\obj\Debug\netcoreapp2.0\MicroTask.Task.AssemblyInfoInputs.cache
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Task\obj\Debug\netcoreapp2.0\MicroTask.Task.AssemblyInfo.cs
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Task\obj\Debug\netcoreapp2.0\MicroTask.Task.dll
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.Task\obj\Debug\netcoreapp2.0\MicroTask.Task.pdb

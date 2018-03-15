@@ -1,6 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
 using System.Data.SqlClient;
-using System.Data.OracleClient;
 using System.Data;
 using Oracle.ManagedDataAccess.Client;
 
@@ -18,10 +17,10 @@ namespace Infrastructure.Orms.dapper
             return new SqlConnection();
         }
 
-        public MySqlConnection BuildMySqlConnection()
-        {
-            return new MySqlConnection();
-        }
+        //public MySqlConnection BuildMySqlConnection()
+        //{
+        //    return new MySqlConnection();
+        //}
 
         public OracleConnection BuildOracleConneciton()
         {

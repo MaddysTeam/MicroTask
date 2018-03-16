@@ -1,14 +1,17 @@
 ﻿using System;
+using System.Threading.Tasks;
+using DotNetCore.CAP;
+using Microsoft.AspNetCore.Mvc;
+using static Infrastructure.CAPConfiguration;
+
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
-using System.Threading.Tasks;
 using Business;
-using DotNetCore.CAP;
 using IdentityModel.Client;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
 using Steeltoe.Common.Discovery;
+
 
 namespace MicroTask.Controllers
 {
@@ -88,8 +91,17 @@ namespace MicroTask.Controllers
                 });
         }
 
+
         [CapSubscribe("xxx.project.check")]
         public async Task SubscribeMessage(Business.Project project)
+        {
+            Console.WriteLine(project.Name);
+        }
+
+
+
+        [CapSubscribe("xxx.project.check")]
+        public async Task SubscribeMessage2(Business.Project project)
         {
             Console.WriteLine(project.Name);
         }

@@ -7,7 +7,6 @@ using Pivotal.Discovery.Client;
 using Infrastructure;
 using Business;
 using System;
-using DotNetCore.CAP.MySql;
 
 namespace MicroTask.Project
 {
@@ -25,16 +24,12 @@ namespace MicroTask.Project
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            
             // add health check
             services.AddHealthConfigurationByMetrics(Configuration);
 
             // add cap
-            services.AddCap(x =>
-            {
-                x.UseMySql(Configuration.GetSection("ConnectStrings:MySql").Value);
-                x.UseRabbitMQ("localhost");
-            });
-
+            services.AddCapWithMySQLAndRabbit(Configuration);
 
             // add auth service
             services.AddDiscoveryClient(Configuration);
@@ -95,7 +90,7 @@ namespace MicroTask.Project
             {
                 app.UseDeveloperExceptionPage();
             }
-
+                
             // use authentication
             app.UseAuthentication();
 

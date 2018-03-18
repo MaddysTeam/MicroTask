@@ -83,9 +83,6 @@ namespace MicroTask.Project
             // use health check by app metrics
             app.UseHealthConfigurationByMetrics(lifeTime);
 
-            // use cap
-            app.UseCap();
-
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -96,6 +93,9 @@ namespace MicroTask.Project
 
             // use mvc
             app.UseMvc();
+
+            // use cap
+            app.UseCap();
 
             // use Pivotal discovery client
             app.UseDiscoveryClient();

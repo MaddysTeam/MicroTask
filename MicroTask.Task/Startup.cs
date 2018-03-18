@@ -24,7 +24,12 @@ namespace MicroTask.Task
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // add health check
             services.AddHealthConfigurationByMetrics(Configuration);
+
+            // add cap
+            services.AddCapWithMySQLAndRabbit(Configuration);
+
             // add auth service
             services.AddDiscoveryClient(Configuration);
             services.ConfigureAuthService(Configuration);
@@ -87,6 +92,9 @@ namespace MicroTask.Task
 
             // use mvc
             app.UseMvc();
+
+            // use cap
+            app.UseCap();
 
             // use Pivotal discovery client
             app.UseDiscoveryClient();

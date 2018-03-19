@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
-      "IdentityModel/2.13.0": {
+      "IdentityModel/3.0.0": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "10.0.3"
@@ -4886,6 +4886,7 @@
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
           "Camoran.Redis": "1.0.0",
+          "IdentityModel": "3.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "2.0.0",
           "Microsoft.AspNetCore.Authorization": "2.0.0",
           "Newtonsoft.Json": "10.0.3"
@@ -4900,15 +4901,17 @@
     }
   },
   "libraries": {
-    "IdentityModel/2.13.0": {
-      "sha512": "K1cC69z7KT871OIbAs3pKzTtOJx/lcuHKigSehqyctaLSOFJR1pTMXXKV0zrsIDGfsAUotXLqNuwyNoLUSqLuQ==",
+    "IdentityModel/3.0.0": {
+      "sha512": "EKMOOUUqDzBR3goiA8eWJ1aQBz1AMfKVxxR7XnzAf5qq2k9vr6GT91SyHmzC14KINpNNJOrbmowXf5S04gQ0ZA==",
       "type": "package",
-      "path": "identitymodel/2.13.0",
+      "path": "identitymodel/3.0.0",
       "files": [
-        "identitymodel.2.13.0.nupkg.sha512",
+        "identitymodel.3.0.0.nupkg.sha512",
         "identitymodel.nuspec",
         "lib/net452/IdentityModel.dll",
         "lib/net452/IdentityModel.xml",
+        "lib/net461/IdentityModel.dll",
+        "lib/net461/IdentityModel.xml",
         "lib/netstandard1.4/IdentityModel.dll",
         "lib/netstandard1.4/IdentityModel.xml",
         "lib/netstandard2.0/IdentityModel.dll",

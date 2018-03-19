@@ -1,6 +1,7 @@
 ﻿using Business;
 using Chloe.MySql;
 using Common;
+using Common.Auth.Token;
 using DotNetCore.CAP;
 using Infrastructure;
 using Microsoft.AspNetCore.Authorization;
@@ -68,7 +69,7 @@ namespace Controllers
             var authority = _config.GetSection("Identity:Authority").Value;
             var projectApi = _config.GetSection("Identity:Api").Value;
 
-            var accessTokenResponse = await AuthService.RequestAccesstokenAsync(
+            var accessTokenResponse = await Common.Auth.Token.AuthService.RequestAccesstokenAsync(
                  new AuthTokenRequest(authority, client, secret, projectApi, "tom", "aaa", _handler),
                  AuthType.byResoucePassword);
 

@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
+      "IdentityModel/3.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/IdentityModel.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityModel.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Authentication/2.0.0": {
         "type": "package",
         "dependencies": {
@@ -2165,6 +2177,23 @@
     }
   },
   "libraries": {
+    "IdentityModel/3.0.0": {
+      "sha512": "EKMOOUUqDzBR3goiA8eWJ1aQBz1AMfKVxxR7XnzAf5qq2k9vr6GT91SyHmzC14KINpNNJOrbmowXf5S04gQ0ZA==",
+      "type": "package",
+      "path": "identitymodel/3.0.0",
+      "files": [
+        "identitymodel.3.0.0.nupkg.sha512",
+        "identitymodel.nuspec",
+        "lib/net452/IdentityModel.dll",
+        "lib/net452/IdentityModel.xml",
+        "lib/net461/IdentityModel.dll",
+        "lib/net461/IdentityModel.xml",
+        "lib/netstandard1.4/IdentityModel.dll",
+        "lib/netstandard1.4/IdentityModel.xml",
+        "lib/netstandard2.0/IdentityModel.dll",
+        "lib/netstandard2.0/IdentityModel.xml"
+      ]
+    },
     "Microsoft.AspNetCore.Authentication/2.0.0": {
       "sha512": "QmgG+EkJg+lObB7XffZGrbj1E8JE74ZePyVsuywhXrvPDObrjUwyvsbkOQvdtjiULhkh+8fgfhBcDTTiMr56Eg==",
       "type": "package",
@@ -6909,6 +6938,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
       "Camoran.Redis >= 1.0.0",
+      "IdentityModel >= 3.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 2.0.0",
       "Microsoft.AspNetCore.Authorization >= 2.0.0",
       "Microsoft.NETCore.App >= 2.0.0",
@@ -6967,6 +6997,10 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
+          "IdentityModel": {
+            "target": "Package",
+            "version": "[3.0.0, )"
+          },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
             "version": "[2.0.0, )"

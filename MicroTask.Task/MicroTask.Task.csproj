@@ -8,6 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Infrastructure\Cache\" />
+    <Folder Include="Infrastructure\Exceptions\" />
+    <Folder Include="Infrastructure\Extensions\" />
     <Folder Include="Infrastructure\Logger\log4net\" />
     <Folder Include="Infrastructure\Orms\dapper\paginaiton\" />
     <Folder Include="wwwroot\" />

@@ -1,23 +1,12 @@
 version: '3'
 
 services:
-  configservice:
-    volumes:
-      - C:\Users\JimmyPoor\onecoremsvsmon:C:\remote_debugger:ro
-    entrypoint: C:\\remote_debugger\\x64\\msvsmon.exe /noauth /anyuser /silent /nostatus /noclrwarn /nosecuritywarn /nofirewallwarn /nowowwarn /timeout:2147483646
-    labels:
-      com.microsoft.visualstudio.debuggee.program: "\"C:\\Program Files\\dotnet\\dotnet.exe\""
-      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_configservice$ ConfigService.dll"
-      com.microsoft.visualstudio.debuggee.workingdirectory: "C:\\app"
-      com.microsoft.visualstudio.debuggee.killprogram: "C:\\remote_debugger\\x64\\utils\\KillProcess.exe dotnet.exe"
-
   microtask.project:
     volumes:
-      - C:\Users\JimmyPoor\onecoremsvsmon:C:\remote_debugger:ro
+      - C:\Users\JimmyPoor\onecoremsvsmon\15.0.27130.2010:C:\remote_debugger:ro
     entrypoint: C:\\remote_debugger\\x64\\msvsmon.exe /noauth /anyuser /silent /nostatus /noclrwarn /nosecuritywarn /nofirewallwarn /nowowwarn /timeout:2147483646
     labels:
       com.microsoft.visualstudio.debuggee.program: "\"C:\\Program Files\\dotnet\\dotnet.exe\""
       #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_microtask.project$ MicroTask.Project.dll"
       com.microsoft.visualstudio.debuggee.workingdirectory: "C:\\app"
       com.microsoft.visualstudio.debuggee.killprogram: "C:\\remote_debugger\\x64\\utils\\KillProcess.exe dotnet.exe"
-

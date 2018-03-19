@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 namespace Controllers
 {
 
-    [Route("project")]
+   // [Route("project")]
     public class ProjectController : Controller
     {
 
@@ -48,9 +48,9 @@ namespace Controllers
 
         // POST project/{id}
         [HttpGet]
-        [Route("{id}")]
-        [Authorize(Roles = "admin")]
-        [Route("admin")]
+        //[Route("{id}")]
+        //[Authorize(Roles = "admin")]
+        [Route("admin/{id}")]
         public Project GetProject(string id)
         {
             var project = _projectService.GetProjectById(id);
@@ -60,7 +60,7 @@ namespace Controllers
 
 
         [HttpGet]
-        [ActionLoggerFilter]
+        //[ActionLoggerFilter]
         public async Task<string> Get()
         {
             var client = _config.GetSection("Identity:Client").Value;

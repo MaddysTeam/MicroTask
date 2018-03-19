@@ -1,8 +1,5 @@
-﻿using Chloe.Infrastructure;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using MySql.Data.MySqlClient;
-using System.Data;
 
 namespace Infrastructure
 {

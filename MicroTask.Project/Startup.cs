@@ -4,6 +4,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Pivotal.Discovery.Client;
+using Common.Cache.Redis;
+using Common.Loggers.Log4Net;
 using Infrastructure;
 using Business;
 using System;
@@ -77,8 +79,8 @@ namespace MicroTask.Project
             // use session
             // app.UseSession();
 
-            // use log
-            app.UseNetCoreLogger(loggerFactory, LogType.Console, Configuration);
+            // use log4net
+            loggerFactory.AddLog4Net();
 
             // use health check by app metrics
             app.UseHealthConfigurationByMetrics(lifeTime);

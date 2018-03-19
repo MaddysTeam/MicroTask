@@ -2,6 +2,10 @@
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
+    "iis": {
+      "applicationUrl": "http://localhost/MicroTask.Task",
+      "sslPort": 0
+    },
     "iisExpress": {
       "applicationUrl": "http://localhost:57461/",
       "sslPort": 0
@@ -17,7 +21,7 @@
       }
     },
     "MicroTask.Task": {
-      "commandName": "Task",
+      "commandName": "Project",
       "launchUrl": "api/values",
       "environmentVariables": {
         "ASPNETCORE_URLS": "http://*:2002",

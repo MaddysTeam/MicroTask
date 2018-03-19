@@ -5386,6 +5386,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
+          "Camoran.Redis": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "2.0.0",
           "Microsoft.AspNetCore.Authorization": "2.0.0",
           "Newtonsoft.Json": "10.0.3"

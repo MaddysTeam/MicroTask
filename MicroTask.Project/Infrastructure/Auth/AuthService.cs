@@ -80,14 +80,3 @@ namespace Infrastructure
         }
     }
 }
-
-
-// TODO: will delete 
-// Console.WriteLine(tokenResponse.Json);
-
-//var httpClient = new HttpClient();
-//httpClient.SetBearerToken(tokenResponse.AccessToken);
-
-//responseMessage = await httpClient.GetAsync("http://localhost:5001/api/values");
-
-//return responseMessage;

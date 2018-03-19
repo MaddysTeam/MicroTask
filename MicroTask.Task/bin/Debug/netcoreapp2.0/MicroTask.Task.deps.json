@@ -4395,6 +4395,7 @@
       },
       "Common/1.0.0": {
         "dependencies": {
+          "Camoran.Redis": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "2.0.1",
           "Microsoft.AspNetCore.Authorization": "2.0.1",
           "Newtonsoft.Json": "10.0.3"

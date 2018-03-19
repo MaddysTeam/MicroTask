@@ -34,3 +34,7 @@ E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\Common\obj\Debug\netcor
 E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\Common\obj\Debug\netcoreapp2.0\Common.AssemblyInfo.cs
 E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\Common\bin\Debug\netcoreapp2.0\Common.deps.json
 E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\Common\obj\Debug\netcoreapp2.0\Common.csprojResolveAssemblyReference.cache
+C:\project\micro_service\MicroTask\Common\bin\Debug\netcoreapp2.0\Camoran.Redis.dll
+C:\project\micro_service\MicroTask\Common\bin\Debug\netcoreapp2.0\Camoran.Redis.pdb
+C:\project\micro_service\MicroTask\Common\bin\Debug\netcoreapp2.0\Microsoft.AspNetCore.Mvc.Core.dll
+C:\project\micro_service\MicroTask\Common\bin\Debug\netcoreapp2.0\Microsoft.AspNetCore.Mvc.Core.xml

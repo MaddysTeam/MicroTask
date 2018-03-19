@@ -27,10 +27,19 @@ namespace Infrastructure
 
     public class CAPDbContext : DbContext
     {
+
+        private IConfiguration _config;
+
+        public CAPDbContext(IConfiguration config)
+        {
+            _config = config;
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseMySql("Server=54.222.149.214;Database=microtask;User Id=root;Password=root;");
+            optionsBuilder.UseMySql(_config.GetSection("ConnectStrings:MySql").Value);
         }
+
     }
 
 }

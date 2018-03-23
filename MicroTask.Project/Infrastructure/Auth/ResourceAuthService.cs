@@ -1,24 +1,21 @@
-﻿using Common.Auth.Token;
-using IdentityModel.Client;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Pivotal.Discovery.Client;
 using Steeltoe.Common.Discovery;
-using System.Threading.Tasks;
 
 namespace Infrastructure
 {
 
-    public static class AuthService
+    public static class ResourceAuthService
     {
+
         /// <summary>
         /// auth configuration from identity server 
         /// </summary>
         /// <param name="services">services</param>
         /// <param name="configuration">configuration</param>
-        public static void ConfigureAuthService(this IServiceCollection services, IConfiguration configuration)
+        public static void ConfigureResourceAuthService(this IServiceCollection services, IConfiguration configuration)
         {
             var discoveryClient = services.BuildServiceProvider().GetService<IDiscoveryClient>();
             var handler = new DiscoveryHttpClientHandler(discoveryClient);
@@ -26,7 +23,6 @@ namespace Infrastructure
             var apiName = configuration.GetSection("Identity:Api").Value;
             var secret = configuration.GetSection("Identity:Secret").Value;
 
-           // services.AddDiscoveryClient(configuration);
             services.AddAuthorization();
             services.AddAuthentication(x =>
             {
@@ -44,7 +40,7 @@ namespace Infrastructure
                 x.IntrospectionBackChannelHandler = handler;
             });
         }
-
-      
+ 
     }
+
 }

@@ -28,14 +28,19 @@ namespace MicroTask.Project
         {
             
             // add health check
-            services.AddHealthConfigurationByMetrics(Configuration);
+            // services.AddHealthConfigurationByMetrics(Configuration);
 
             // add cap
             services.AddCapWithMySQLAndRabbit(Configuration);
 
-            // add auth service
+            // add spring cloud discovery clientd
             services.AddDiscoveryClient(Configuration);
-            services.ConfigureAuthService(Configuration);
+
+            // add resource auth service
+            services.ConfigureResourceAuthService(Configuration);
+
+            // inject action logger filter instance
+            services.AddSingleton<ActionLoggerFilter>();
 
             // add mvc,include filters and etc..
             services.AddMvcCore(x =>
@@ -48,7 +53,7 @@ namespace MicroTask.Project
 
             // add Cors in header,method and credentials
             services.AddCors(options => {
-                options.AddPolicy("CorsPolicy",
+                options.AddPolicy("CORS",
                   builder => builder.AllowAnyOrigin()
                   .AllowAnyMethod()
                   .AllowAnyHeader()
@@ -59,13 +64,12 @@ namespace MicroTask.Project
             services.AddRedisCache(Configuration);
 
             // add redis session
-            //services.AddDistributedRedisCache(option => {
-            //    option.Configuration = Configuration.GetSection("RedisSessionSettings:conn").Value;
-            //    option.InstanceName = "master";
-            //});
-            //services.AddSession();
+            //services.AddRedisSession(Configuration);
 
-            // add chole orm 
+            // add memory session
+            services.AddMemorySession(Configuration);
+
+            // add chole orm , or you can use another orm tools instead
             services.AddChloeWithMySQL(Configuration);
 
             // injeciton logic repository and service for business
@@ -77,13 +81,13 @@ namespace MicroTask.Project
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory,IApplicationLifetime lifeTime)
         {
             // use session
-            // app.UseSession();
+            app.UseSession();
 
             // use log4net
             loggerFactory.AddLog4Net();
 
             // use health check by app metrics
-            app.UseHealthConfigurationByMetrics(lifeTime);
+            // app.UseHealthConfigurationByMetrics(lifeTime);
 
             if (env.IsDevelopment())
             {
@@ -92,6 +96,9 @@ namespace MicroTask.Project
                 
             // use authentication
             app.UseAuthentication();
+
+            // use cross domain policy
+            app.UseCors("CORS");
 
             // use mvc
             app.UseMvc();
@@ -102,8 +109,6 @@ namespace MicroTask.Project
             // use Pivotal discovery client
             app.UseDiscoveryClient();
 
-            // use cross domain policy
-            app.UseCors("CorsPolicy");
 
             // use forbidden middleware
             app.UseForbiddenMiddleware(Configuration, loggerFactory.CreateLogger<Exception>());

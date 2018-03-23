@@ -1,7 +1,8 @@
-﻿using IdentityModel.Client;
+﻿
+using IdentityModel.Client;
 using System.Threading.Tasks;
 
-namespace Common.Auth.Token
+namespace Common.Auth
 {
 
     public static class AuthService
@@ -37,7 +38,6 @@ namespace Common.Auth.Token
             {
                 authTokenResponse = new AuthTokenResponse("", tokenResponse.IsError, tokenResponse.Error);
             }
-
             return new AuthTokenResponse(tokenResponse.AccessToken, true, null);
         }
 

@@ -1,7 +1,5 @@
-﻿using Common;
-using IdentityModel;
+﻿using IdentityModel;
 using IdentityServer4.Validation;
-using System;
 using System.Collections.Generic;
 using System.Security.Claims;
 using System.Threading.Tasks;

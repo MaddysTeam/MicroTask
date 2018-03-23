@@ -1,7 +1,6 @@
 ﻿using Camoran.Redis.Cache;
-using System;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Common.Cache.Redis
 {

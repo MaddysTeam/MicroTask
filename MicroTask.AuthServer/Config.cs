@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using IdentityServer4;
-using IdentityServer4.Models;
+﻿using IdentityServer4.Models;
 using Microsoft.Extensions.Configuration;
+using System.Collections.Generic;
 
 namespace Identity
 {
@@ -33,17 +29,8 @@ namespace Identity
                 new ApiResource("ProjectApi", "PROJECT API")
                 {
                     ApiSecrets = {new Secret("secret".Sha256())},
-                    UserClaims = new List<string>{"role"}
+                    UserClaims = new List<string>{"role"},
                 },
-                new ApiResource("UserApi","USER API")
-                {
-                    //ApiSecrets = {new Secret("secret".Sha256())},
-                    //UserClaims = new List<string>{"role"}
-                },
-                new ApiResource("CacheApi","CACHE API")
-                {
-
-                }
             };
         }
 
@@ -54,19 +41,6 @@ namespace Identity
             // clients
             return new List<Client>
             {
-                // for client credentials by using jwt token type
-                //new Client
-                //{
-                //    ClientId = "client",E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\MicroTask.AuthServer\Program.cs
-                //    AllowedGrantTypes = GrantTypes.ClientCredentials,
-                //    ClientSecrets =
-                //    {
-                //        new Secret("secret".Sha256())
-                //    },
-                //    AllowedScopes = { "UserApi","ProjectApi","CacheApi" },
-                //    AccessTokenType = AccessTokenType.Jwt
-                //},
-                // for owner password by using reference token type
                 new Client
                 {
                     ClientId = "client",
@@ -75,8 +49,11 @@ namespace Identity
                     {
                         new Secret("secret".Sha256())
                     },
-                    //AllowOfflineAccess = true,
-                    //AccessTokenLifetime = accessTokenLifetime,
+
+                    AllowOfflineAccess = true,
+                    AccessTokenLifetime = accessTokenLifetime,
+                    //RedirectUris={""},
+                    //PostLogoutRedirectUris={ ""},
                     AllowedScopes = { "UserApi","ProjectApi","CacheApi"},
                     AccessTokenType = AccessTokenType.Jwt
                 },

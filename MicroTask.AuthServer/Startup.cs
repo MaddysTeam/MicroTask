@@ -22,7 +22,6 @@ namespace Identity
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDiscoveryClient(Configuration);
-            //var redisconnectionString = Configuration.GetConnectionString("RedisConnectionString");
             var config = new Config(Configuration);
             services.AddMvc();
             services.AddIdentityServer(x =>
@@ -34,8 +33,8 @@ namespace Identity
                 .AddInMemoryPersistedGrants()
                 .AddInMemoryApiResources(config.GetApiResources())
                 .AddInMemoryClients(config.GetClients());
-            services.AddSingleton<IPersistedGrantStore, RedisPersistedGrantStore>();
             services.AddTransient<IAccountServices, AccountService>();
+            services.AddSingleton<IPersistedGrantStore, RedisPersistedGrantStore>();
             services.AddTransient<IResourceOwnerPasswordValidator, ResourceOwnerPasswordValidator>();
         }
 

@@ -2,12 +2,10 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Common.Cache.Redis
 {
+
     public interface IRedisCache
     {
         string Get(string key);
@@ -84,5 +82,7 @@ namespace Common.Cache.Redis
         private int expireSeconds = 0;
         private int expireDays = 0;
         private ILogger logger;
+
     }
+
 }

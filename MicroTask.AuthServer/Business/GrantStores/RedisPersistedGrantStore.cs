@@ -1,27 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using IdentityServer4.Models;
+﻿using IdentityServer4.Models;
 using IdentityServer4.Stores;
 using Microsoft.Extensions.Configuration;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Identity
 {
+
     public class RedisPersistedGrantStore : IPersistedGrantStore
     {
         static Dictionary<string, PersistedGrant> _dic;
-        //private readonly ICacheClient _cacheClient;
-        //private readonly IConfiguration _configuration;
+        private readonly IConfiguration _configuration;
 
-        //public RedisPersistedGrantStore(ICacheClient cacheClient, IConfiguration configuration)
-        //{
-        //    _cacheClient = cacheClient;
-        //    _configuration = configuration;
-        //}
-
-        public RedisPersistedGrantStore()
+        public RedisPersistedGrantStore(IConfiguration configuration)
         {
+            _configuration = configuration;
             _dic = new Dictionary<string, PersistedGrant>();
         }
 
@@ -30,7 +23,7 @@ namespace Identity
         /// <returns></returns>
         public async Task StoreAsync(PersistedGrant grant)
         {
-            _dic.Add(grant.Key, grant);
+            //_dic.Add(grant.Key, grant);
             //var accessTokenLifetime = double.Parse(_configuration.GetConnectionString("accessTokenLifetime"));
             //var timeSpan = TimeSpan.FromSeconds(accessTokenLifetime);
             //_cacheClient?.SetAsync(grant.Key, grant, timeSpan);
@@ -42,7 +35,8 @@ namespace Identity
         /// <returns></returns>
         public async Task<PersistedGrant> GetAsync(string key)
         {
-            return _dic[key];
+            return null;
+           // return _dic[key];
             //if (_cacheClient.ExistsAsync(key).Result)
             //{
             //    var ss = _cacheClient.GetAsync<PersistedGrant>(key).Result;
@@ -90,4 +84,5 @@ namespace Identity
         }
 
     }
+
 }

@@ -1,6 +1,6 @@
 ﻿using System.Net.Http;
 
-namespace Common.Auth.Token
+namespace Common.Auth
 {
 
     public class AuthTokenRequest

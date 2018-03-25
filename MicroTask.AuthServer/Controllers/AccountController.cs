@@ -1,4 +1,5 @@
 ﻿using Business;
+using Common;
 using Common.Auth;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -17,47 +18,49 @@ namespace Controllers
     public class AccountController : Controller
     {
 
-        public AccountController(IConfiguration configuration, IDiscoveryClient client)
+        public AccountController(
+            IConfiguration configuration,
+            IDiscoveryClient client,
+            IAccountServices service
+            )
         {
             _config = configuration;
             _handler = new DiscoveryHttpClientHandler(client);
+            _accountService = service;
         }
 
 
         [Route("Login")]
         public async Task<IActionResult> Login(LoginViewModel model)
         {
-            if (model.AccessToken != null)
+            var isSuccess =await _accountService.LoginAsync(new Account { UserName=model.Name, Password=model.Password, Name=model.Name  });
+            if (isSuccess)
             {
-                return Redirect(model.ReturnUrl);
-            }
-
-            var client = "client";
-            var secret = "secret";
-            var authority = "http://identity";
-            var projectApi = "ProjectApi offline_access";
-            var accessTokenResponse = await AuthService.RequestAccesstokenAsync(
-                 new AuthTokenRequest(authority, client, secret, projectApi, "tom", "aaa", _handler),
-                 AuthType.byResoucePassword);
-            if (accessTokenResponse.IsSuccess)
-            {
-                Response.Cookies.Append("accessToken", accessTokenResponse.AccessToken);
-
                 // 如果使用session
-                //HttpContext.Session.SetString("accessToken", accessTokenResponse.AccessToken);
+                //HttpContext.Session.SetString("key", "value");
+
+                if (!model.ReturnUrl.IsNullOrEmpty())
+                {
+                    return Redirect(model.ReturnUrl);
+                }
+
+                return Ok();
             }
 
-            return Redirect(model.ReturnUrl);
+            else
+            {
+                return Forbid();//TODO
+            }
         }
 
         [Route("Register")]
-        public void Register()
+        public void Register(RegisterViewModel model)
         {
 
         }
 
         [Route("ChangePassword")]
-        public void ChangePassword()
+        public void ChangePassword(ChangePasswordViewModel model)
         {
 
         }
@@ -65,22 +68,30 @@ namespace Controllers
         [Route("ChangePassword")]
         public async Task LogOut()
         {
+           await _accountService.SignOutAsync();
+        }
 
-            //var user = HttpContext.User;
+        [Route("AccessToken")]
+        public async Task<string> GetAssessTokenByNameAndPassword(string name, string password)
+        {
+            var client = "client";
+            var secret = "secret";
+            var authority = "http://identity";
+            var projectApi = "ProjectApi offline_access";
+            var accessTokenResponse = await AuthService.RequestAccesstokenAsync(
+                 new AuthTokenRequest(authority, client, secret, projectApi, name, password, _handler),
+                 AuthType.byResoucePassword);
+            if (accessTokenResponse.IsSuccess)
+            {
+                return accessTokenResponse.AccessToken;
+            }
 
-            //if (user.Identity.IsAuthenticated)
-            //{
-                    
-            //}
-            //TODO
-            Response.Cookies.Delete("accessToken");
-
-            // 如果使用session
-            // HttpContext.Session.Remove("");
+            return string.Empty;
         }
 
         private readonly IConfiguration _config;
         private readonly DiscoveryHttpClientHandler _handler;
+        private readonly IAccountServices _accountService;
 
     }
 

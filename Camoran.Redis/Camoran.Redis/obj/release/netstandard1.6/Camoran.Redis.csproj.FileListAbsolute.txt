@@ -1,0 +1,10 @@
+C:\project\micro_service\Microtask\Camoran.Redis\Camoran.Redis\bin\release\netstandard1.6\Camoran.Redis.deps.json
+C:\project\micro_service\Microtask\Camoran.Redis\Camoran.Redis\bin\release\netstandard1.6\Camoran.Redis.dll
+C:\project\micro_service\Microtask\Camoran.Redis\Camoran.Redis\bin\release\netstandard1.6\Camoran.Redis.pdb
+C:\project\micro_service\Microtask\Camoran.Redis\Camoran.Redis\bin\release\netstandard1.6\System.Text.Encodings.Web.dll
+C:\project\micro_service\Microtask\Camoran.Redis\Camoran.Redis\bin\release\netstandard1.6\System.Text.Encodings.Web.xml
+C:\project\micro_service\Microtask\Camoran.Redis\Camoran.Redis\obj\release\netstandard1.6\Camoran.Redis.csproj.CoreCompileInputs.cache
+C:\project\micro_service\Microtask\Camoran.Redis\Camoran.Redis\obj\release\netstandard1.6\Camoran.Redis.AssemblyInfoInputs.cache
+C:\project\micro_service\Microtask\Camoran.Redis\Camoran.Redis\obj\release\netstandard1.6\Camoran.Redis.AssemblyInfo.cs
+C:\project\micro_service\Microtask\Camoran.Redis\Camoran.Redis\obj\release\netstandard1.6\Camoran.Redis.dll
+C:\project\micro_service\Microtask\Camoran.Redis\Camoran.Redis\obj\release\netstandard1.6\Camoran.Redis.pdb

@@ -1512,7 +1512,7 @@
       ]
     },
     "System.Collections.Specialized/4.3.0": {
-      "sha512": "Epx8PoVZR0iuOnJJDzp7pWvdfMMOAvpUo95pC4ScH2mJuXkKA2Y4aR3cG9qt2klHgSons1WFh4kcGW7cSXvrxg==",
+      "sha512": "4CdaBD613qhNJCYZfV9m/ZIMYMwwtgnIbuaX3Ml0iCT71IZUVJekr1OKT9BQtsnnOzVTufJ2oOGRBe+RVwIRUg==",
       "type": "package",
       "path": "system.collections.specialized/4.3.0",
       "files": [
@@ -1606,7 +1606,7 @@
       ]
     },
     "System.ComponentModel.Primitives/4.3.0": {
-      "sha512": "j8GUkCpM8V4d4vhLIIoBLGey2Z5bCkMVNjEZseyAlm4n5arcsJOeI3zkUP+zvZgzsbLTYh4lYeP/ZD/gdIAPrw==",
+      "sha512": "f+6D15Sb5KR5ySHOUAPA+tS6/QX44wTqb079lntpd59tA+ZAu88zml5PdZaX1lMhzoxyi64ot9flqRalXTxOKQ==",
       "type": "package",
       "path": "system.componentmodel.primitives/4.3.0",
       "files": [
@@ -1643,7 +1643,7 @@
       ]
     },
     "System.ComponentModel.TypeConverter/4.3.0": {
-      "sha512": "16pQ6P+EdhcXzPiEK4kbA953Fu0MNG2ovxTZU81/qsCd1zPRsKc3uif5NgvllCY598k6bI0KUyKW8fanlfaDQg==",
+      "sha512": "W61SmUE8zaP3oPPZfaTmyNJRyIde8cKlFveK6ipwDdMC9zcL6PmxKF1TCWgyA5V1YgePXSKs5HkKydyOu+Y0/A==",
       "type": "package",
       "path": "system.componentmodel.typeconverter/4.3.0",
       "files": [
@@ -3018,7 +3018,7 @@
       ]
     },
     "System.Runtime.Serialization.Formatters/4.3.0": {
-      "sha512": "KT591AkTNFOTbhZlaeMVvfax3RqhH1EJlcwF50Wm7sfnBLuHiOeZRRKrr1ns3NESkM20KPZ5Ol/ueMq5vg4QoQ==",
+      "sha512": "hU7FoYKJVeqj0o2jvFqmMF86IcRPrx//DXJiLsXcu9GuBPYU9QbUdtLCjeZlr8gyoIzVf9jV03K1K/DG1tZcow==",
       "type": "package",
       "path": "system.runtime.serialization.formatters/4.3.0",
       "files": [
@@ -3045,7 +3045,7 @@
       ]
     },
     "System.Runtime.Serialization.Primitives/4.3.0": {
-      "sha512": "Wz+0KOukJGAlXjtKr+5Xpuxf8+c8739RI1C+A2BoQZT+wMCCoMDDdO8/4IRHfaVINqL78GO8dW8G2lW/e45Mcw==",
+      "sha512": "FWToSbVUcDz9CDf56ukfImZiK8Yow224L/NktKvQom9LpmI/chiIbrDrwKTb+YGEQYiwpXsLCZUXz3PbMpFrjA==",
       "type": "package",
       "path": "system.runtime.serialization.primitives/4.3.0",
       "files": [
@@ -3604,11 +3604,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "E:\\项目文件(GitLab)\\MicroService\\MicroTask\\MicroTask\\IdentityClientDemo\\IdentityClientDemo.csproj",
+      "projectUniqueName": "C:\\project\\micro_service\\MicroTask\\IdentityClientDemo\\IdentityClientDemo.csproj",
       "projectName": "IdentityClientDemo",
-      "projectPath": "E:\\项目文件(GitLab)\\MicroService\\MicroTask\\MicroTask\\IdentityClientDemo\\IdentityClientDemo.csproj",
+      "projectPath": "C:\\project\\micro_service\\MicroTask\\IdentityClientDemo\\IdentityClientDemo.csproj",
       "packagesPath": "C:\\Users\\JimmyPoor\\.nuget\\packages\\",
-      "outputPath": "E:\\项目文件(GitLab)\\MicroService\\MicroTask\\MicroTask\\IdentityClientDemo\\obj\\",
+      "outputPath": "C:\\project\\micro_service\\MicroTask\\IdentityClientDemo\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
@@ -3624,8 +3624,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://nuget.cnblogs.com/v3/index.json": {}
+        "http://www.nuget.org/api/v2": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.0": {

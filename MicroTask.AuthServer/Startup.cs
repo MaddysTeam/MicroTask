@@ -3,6 +3,7 @@ using IdentityServer4.Stores;
 using IdentityServer4.Validation;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Pivotal.Discovery.Client;
@@ -22,8 +23,19 @@ namespace Identity
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDiscoveryClient(Configuration);
-            var config = new Config(Configuration);
+
+            services.AddIdentity<Account, AccountRole>();
+            services.AddTransient<IUserStore<Account>, AccountStore>();
+            services.AddTransient<IRoleStore<AccountRole>, AccountRoleStore>();
+            services.Configure<IdentityOptions>(options => {
+                // identity options 
+                options.Password.RequiredLength = 6;
+                options.Password.RequireDigit = true;
+            });
+
             services.AddMvc();
+
+            var config = new Config(Configuration);
             services.AddIdentityServer(x =>
                 {
                     x.IssuerUri = "http://identity";
@@ -33,7 +45,7 @@ namespace Identity
                 .AddInMemoryPersistedGrants()
                 .AddInMemoryApiResources(config.GetApiResources())
                 .AddInMemoryClients(config.GetClients());
-            services.AddTransient<IAccountServices, AccountService>();
+            services.AddTransient<IAccountServices, AccountIdentityService>();
             services.AddSingleton<IPersistedGrantStore, RedisPersistedGrantStore>();
             services.AddTransient<IResourceOwnerPasswordValidator, ResourceOwnerPasswordValidator>();
         }

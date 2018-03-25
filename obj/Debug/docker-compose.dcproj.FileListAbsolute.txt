@@ -1,2 +1,1 @@
-C:\project\micro_service\MicroTask\MicroTask\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
 C:\project\micro_service\MicroTask\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache

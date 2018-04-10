@@ -65,7 +65,7 @@ namespace Controllers
 
         }
 
-        [Route("ChangePassword")]
+        [Route("LogOut")]
         public async Task LogOut()
         {
            await _accountService.SignOutAsync();

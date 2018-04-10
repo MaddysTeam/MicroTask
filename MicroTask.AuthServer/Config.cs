@@ -31,6 +31,12 @@ namespace Identity
                     ApiSecrets = {new Secret("secret".Sha256())},
                     UserClaims = new List<string>{"role"},
                 },
+
+                new ApiResource("TaskApi", "Task API")
+                {
+                    ApiSecrets = {new Secret("secret".Sha256())},
+                    UserClaims = new List<string>{"role"},
+                },
             };
         }
 
@@ -54,7 +60,7 @@ namespace Identity
                     AccessTokenLifetime = accessTokenLifetime,
                     //RedirectUris={""},
                     //PostLogoutRedirectUris={ ""},
-                    AllowedScopes = { "UserApi","ProjectApi","CacheApi"},
+                    AllowedScopes = { "UserApi","ProjectApi","TaskApi"},
                     AccessTokenType = AccessTokenType.Jwt
                 },
             };

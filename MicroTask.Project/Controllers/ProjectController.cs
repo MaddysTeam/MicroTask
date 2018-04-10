@@ -72,8 +72,9 @@ namespace Controllers
             //throw new ProjectExcption()
             //var values = "aaaa";
             HttpContext.Session.SetString("key", "strValue");
-            //cache.Set("aaa", values);
+
             return string.Empty;
+            //cache.Set("aaa", values);            return string.Empty;
         }
 
 

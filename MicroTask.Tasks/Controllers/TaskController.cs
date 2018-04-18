@@ -50,17 +50,14 @@ namespace Controllers
         //}
 
 
-        //// POST project/{id}
-        //[HttpGet]
-        //[Route("{id}")]
-        //[Authorize(Roles = "admin")]
-        //[Route("admin/{id}")]
-        //public Project GetProject(string id)
-        //{
-        //    var project = _projectService.GetProjectById(id);
-
-        //    return project;
-        //}
+        // POST project/{id}
+        [HttpGet]
+        [Authorize()]
+        [Route("worktask/{id}")]
+        public string GetTask(string id)
+        {
+            return "fuck";
+        }
 
 
         //[HttpGet]

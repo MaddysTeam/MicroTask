@@ -1,0 +1,14 @@
+C:\project\micro_service\Microtask\microtask.project\bin\release\netcoreapp2.0\MicroTask.Project.deps.json
+C:\project\micro_service\Microtask\microtask.project\bin\release\netcoreapp2.0\MicroTask.Project.runtimeconfig.json
+C:\project\micro_service\Microtask\microtask.project\bin\release\netcoreapp2.0\MicroTask.Project.runtimeconfig.dev.json
+C:\project\micro_service\Microtask\microtask.project\bin\release\netcoreapp2.0\MicroTask.Project.dll
+C:\project\micro_service\Microtask\microtask.project\bin\release\netcoreapp2.0\MicroTask.Project.pdb
+C:\project\micro_service\Microtask\microtask.project\bin\release\netcoreapp2.0\Camoran.Redis.dll
+C:\project\micro_service\Microtask\microtask.project\bin\release\netcoreapp2.0\Common.dll
+C:\project\micro_service\Microtask\microtask.project\bin\release\netcoreapp2.0\Common.pdb
+C:\project\micro_service\Microtask\microtask.project\bin\release\netcoreapp2.0\Camoran.Redis.pdb
+C:\project\micro_service\Microtask\microtask.project\obj\release\netcoreapp2.0\MicroTask.Project.csproj.CoreCompileInputs.cache
+C:\project\micro_service\Microtask\microtask.project\obj\release\netcoreapp2.0\MicroTask.Project.AssemblyInfoInputs.cache
+C:\project\micro_service\Microtask\microtask.project\obj\release\netcoreapp2.0\MicroTask.Project.AssemblyInfo.cs
+C:\project\micro_service\Microtask\microtask.project\obj\release\netcoreapp2.0\MicroTask.Project.dll
+C:\project\micro_service\Microtask\microtask.project\obj\release\netcoreapp2.0\MicroTask.Project.pdb

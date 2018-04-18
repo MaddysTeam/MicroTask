@@ -12,3 +12,4 @@ C:\project\micro_service\MicroTask\MicroTask.Tasks\obj\Debug\netcoreapp2.0\Micro
 C:\project\micro_service\MicroTask\MicroTask.Tasks\obj\Debug\netcoreapp2.0\MicroTask.Tasks.AssemblyInfo.cs
 C:\project\micro_service\MicroTask\MicroTask.Tasks\obj\Debug\netcoreapp2.0\MicroTask.Tasks.dll
 C:\project\micro_service\MicroTask\MicroTask.Tasks\obj\Debug\netcoreapp2.0\MicroTask.Tasks.pdb
+C:\project\micro_service\MicroTask\MicroTask.Tasks\obj\Debug\netcoreapp2.0\MicroTask.Tasks.csprojResolveAssemblyReference.cache

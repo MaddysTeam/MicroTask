@@ -1,7 +1,10 @@
-﻿using IdentityModel;
+﻿using Common;
+using IdentityModel;
 using IdentityServer4.Models;
 using IdentityServer4.Validation;
+using Steeltoe.Common.Discovery;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
@@ -10,30 +13,29 @@ namespace Business
 
     public class ResourceOwnerPasswordValidator : IResourceOwnerPasswordValidator
     {
-        IAccountServices _service;
-
-        public ResourceOwnerPasswordValidator(IAccountServices service)
+        private readonly DiscoveryHttpClientHandler _handler;
+        public ResourceOwnerPasswordValidator(IDiscoveryClient client)
         {
-            _service = service;
+            _handler = new DiscoveryHttpClientHandler(client);
         }
 
         public async Task ValidateAsync(ResourceOwnerPasswordValidationContext context)
         {
-            var user = new Account { Id = "123", Name = context.UserName, Password = context.Password, Role = "admin" };
-
-            var isValid =await _service.ValidateAsync(user);
-
-            if (isValid)
+            var client = new HttpClient(_handler);
+            var url = $"http://localhost:5555/account/Login?name=kissnana&password=123456";
+            var result = await client.GetAsync(url);
+            if (result.IsSuccessStatusCode)
             {
-                var claims = new List<Claim>() {
-                new Claim("role",user.Role)
-            };
-
+                var user = await result.Content.ReadAsObjectAsync<dynamic>();
+                var claims = new List<Claim>()
+                {
+                  new Claim("role","admin")
+                };
                 context.Result =
-                    new GrantValidationResult(
-                        user.Id,
-                        OidcConstants.AuthenticationMethods.Password,
-                        claims);
+                  new GrantValidationResult(
+                      context.UserName,
+                      OidcConstants.AuthenticationMethods.Password,
+                      claims);
             }
             else
             {

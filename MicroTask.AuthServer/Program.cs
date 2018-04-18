@@ -12,7 +12,7 @@ namespace Identity
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseUrls("http://*:8020")
+                .UseUrls("http://*:2012")
                 .UseStartup<Startup>()
                 .Build();
     }

@@ -24,16 +24,14 @@ namespace Identity
         {
             services.AddDiscoveryClient(Configuration);
 
-            services.AddIdentity<Account, AccountRole>();
-            services.AddTransient<IUserStore<Account>, AccountStore>();
-            services.AddTransient<IRoleStore<AccountRole>, AccountRoleStore>();
-            services.Configure<IdentityOptions>(options => {
-                // identity options 
-                options.Password.RequiredLength = 6;
-                options.Password.RequireDigit = true;
-            });
-
-            services.AddMvc();
+            // add mvc,include filters and etc..
+            services.AddMvcCore(x =>
+            {
+               // x.Filters.Add(typeof(ExcepitonFilter));
+            })
+            .AddControllersAsServices()
+            .AddAuthorization()
+            .AddJsonFormatters();
 
             var config = new Config(Configuration);
             services.AddIdentityServer(x =>
@@ -45,7 +43,6 @@ namespace Identity
                 .AddInMemoryPersistedGrants()
                 .AddInMemoryApiResources(config.GetApiResources())
                 .AddInMemoryClients(config.GetClients());
-            services.AddTransient<IAccountServices, AccountIdentityService>();
             services.AddSingleton<IPersistedGrantStore, RedisPersistedGrantStore>();
             services.AddTransient<IResourceOwnerPasswordValidator, ResourceOwnerPasswordValidator>();
         }

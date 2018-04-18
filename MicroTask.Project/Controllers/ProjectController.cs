@@ -52,9 +52,8 @@ namespace Controllers
 
         // POST project/{id}
         [HttpGet]
-        [Route("{id}")]
-        [Authorize(Roles = "admin")]
-        [Route("admin/{id}")]
+        [Authorize()]
+        [Route("project/{id}")]
         public Project GetProject(string id)
         {
             var project = _projectService.GetProjectById(id);

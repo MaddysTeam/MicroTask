@@ -57,6 +57,12 @@ namespace MicroTask.Account
             .AddAuthorization()
             .AddJsonFormatters();
 
+            // add redis session
+            //services.AddRedisSession(Configuration);
+
+            // add server session
+            services.AddMemorySession(Configuration);
+
             // add Cors in header,method and credentials
             services.AddCors(options => {
                 options.AddPolicy("CORS",
@@ -68,12 +74,6 @@ namespace MicroTask.Account
 
             // add redis cache
             services.AddRedisCache(Configuration);
-
-            // add redis session
-            //services.AddRedisSession(Configuration);
-
-            // add memory session
-            services.AddMemorySession(Configuration);
 
             // add chole orm , or you can use another orm tools instead
             services.AddChloeWithMySQL(Configuration);

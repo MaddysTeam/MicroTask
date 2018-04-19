@@ -2,6 +2,7 @@
 using IdentityModel;
 using IdentityServer4.Models;
 using IdentityServer4.Validation;
+using Microsoft.Extensions.Configuration;
 using Steeltoe.Common.Discovery;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -13,35 +14,34 @@ namespace Business
 
     public class ResourceOwnerPasswordValidator : IResourceOwnerPasswordValidator
     {
-        private readonly DiscoveryHttpClientHandler _handler;
-        public ResourceOwnerPasswordValidator(IDiscoveryClient client)
+
+        public ResourceOwnerPasswordValidator(IDiscoveryClient client, IConfiguration configuration)
         {
             _handler = new DiscoveryHttpClientHandler(client);
+            _configuration = configuration;
         }
 
         public async Task ValidateAsync(ResourceOwnerPasswordValidationContext context)
         {
-            var client = new HttpClient(_handler);
-            var url = $"http://localhost:5555/account/Login?name=kissnana&password=123456";
-            var result = await client.GetAsync(url);
-            if (result.IsSuccessStatusCode)
-            {
-                var user = await result.Content.ReadAsObjectAsync<dynamic>();
-                var claims = new List<Claim>()
+            // you can change logic here 
+            // for example : this can get user info by name and password , role info as well 
+
+            var claims = new List<Claim>()
                 {
                   new Claim("role","admin")
                 };
-                context.Result =
-                  new GrantValidationResult(
-                      context.UserName,
-                      OidcConstants.AuthenticationMethods.Password,
-                      claims);
-            }
-            else
-            {
-                context.Result = new GrantValidationResult(TokenRequestErrors.InvalidClient);
-            }
+
+            context.Result =
+                new GrantValidationResult(
+                    context.UserName,
+                    OidcConstants.AuthenticationMethods.Password,
+                    claims);
+
+           // context.Result = new GrantValidationResult(TokenRequestErrors.InvalidClient);
         }
+
+        private readonly DiscoveryHttpClientHandler _handler;
+        private readonly IConfiguration _configuration;
 
     }
 

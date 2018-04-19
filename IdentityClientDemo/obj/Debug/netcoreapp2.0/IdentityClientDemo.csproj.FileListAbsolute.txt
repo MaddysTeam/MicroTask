@@ -30,3 +30,4 @@ E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\IdentityClientDemo\obj\
 E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\IdentityClientDemo\obj\Debug\netcoreapp2.0\IdentityClientDemo.AssemblyInfo.cs
 E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\IdentityClientDemo\obj\Debug\netcoreapp2.0\IdentityClientDemo.dll
 E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\IdentityClientDemo\obj\Debug\netcoreapp2.0\IdentityClientDemo.pdb
+E:\项目文件(GitLab)\MicroService\MicroTask\MicroTask\IdentityClientDemo\obj\Debug\netcoreapp2.0\IdentityClientDemo.csprojResolveAssemblyReference.cache

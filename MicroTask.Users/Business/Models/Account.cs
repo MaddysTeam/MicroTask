@@ -37,6 +37,7 @@ namespace Business
         public string NewPassword { get; set; }
         public string ConfirmPassword { get; set; }
         public string ReturnUrl { get; set; }
+        public string AccessToken { get; set; }
     }
 
     //public class LoginOutViewModel { }

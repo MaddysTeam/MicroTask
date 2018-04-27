@@ -37,23 +37,10 @@ namespace Controllers
             _choleContext = choleContext;
         }
 
-        // POST project/edit
-        [HttpPost]
-        [Route("edit")]
-        public void Edit([FromBody]Project project)
-        {
-            if (project.Id.IsNullOrEmpty())
-            {
-                _projectService.AddProject(project);
-            }
-
-        }
-
-
         // POST project/{id}
         [HttpGet]
         [Authorize()]
-        [Route("project/{id}")]
+        [Route("{id}")]
         public Project GetProject(string id)
         {
             var project = _projectService.GetProjectById(id);
@@ -63,17 +50,57 @@ namespace Controllers
 
 
         [HttpGet]
-        [Route("admin/login")]
-        [TypeFilter(typeof(ActionLoggerFilter))]
-        public async Task<string> Get()
+        [Authorize()]
+        [Route("{id}")]
+        public Project GetProjects(string id,string managerId)
         {
-            //return responseMessage;
-            //throw new ProjectExcption()
-            //var values = "aaaa";
-            HttpContext.Session.SetString("key", "strValue");
+            var project = _projectService.GetProjectById(id);
 
-            return string.Empty;
-            //cache.Set("aaa", values);            return string.Empty;
+            return project;
+        }
+
+        // POST project/edit
+
+        [HttpPost]
+        [Route("edit")]
+        public IActionResult Edit([FromBody]Project project)
+        {
+            if (project == null) return Json(new { });
+
+            var isExist = !_projectService.GetProjectById(project.Id).IsNull();
+            if (!isExist)
+            {
+                _projectService.AddProject(project);
+                return Json(new { });
+            }
+            else
+            {
+                _projectService.UpdateProject(project);
+                return Json(new { });
+            }
+        }
+
+
+        [Authorize]
+        [HttpPost]
+        [Route("delete")]
+        public IActionResult DeleteProject(string id)
+        {
+            if (string.IsNullOrEmpty(id)) return Json(new { });
+            var isExist = !_projectService.GetProjectById(id).IsNull();
+            if (!isExist)
+            {
+                _projectService.RemoveProject(id);
+                return Json(new { });
+            }
+            else
+            {
+                return Json(new { });
+            }
+
+            //    HttpContext.Session.SetString("key", "strValue");
+            //    return string.Empty;
+            //    //cache.Set("aaa", values);            return string.Empty;
         }
 
 
@@ -88,7 +115,7 @@ namespace Controllers
                     Id = Guid.NewGuid().ToString(),
                     Code = "1001",
                     Name = "myPorject",
-                    Owner = "owner"
+                    OwnerId = "owner"
                 });
 
                 trans.Commit();

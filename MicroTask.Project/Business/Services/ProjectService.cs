@@ -38,9 +38,21 @@ namespace Business
             return projects.IsNull() ? null : projects.FirstOrDefault();
         }
 
+        public bool UpdateProject(Project p)
+        {
+            p.EnsureNotNull(() => { return new ProjectException(); });
+
+            return repository.Update(p);
+        }
+
+        public bool RemoveProject(string id)
+        {
+            id.EnsureNotNull(() => { return new ProjectException(); });
+
+            return repository.Delete(id);
+        }
 
         IProjectRespository repository;
-
     }
 
 }

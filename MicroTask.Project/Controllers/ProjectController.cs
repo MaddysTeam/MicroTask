@@ -73,7 +73,7 @@ namespace Controllers
                 _projectService.AddProject(project);
                 return Json(new { });
             }
-            else
+            else 
             {
                 _projectService.UpdateProject(project);
                 return Json(new { });

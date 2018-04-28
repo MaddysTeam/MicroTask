@@ -6,8 +6,8 @@
     public abstract class Entity
     {
         int? _requestedHashCode;
-        int _Id;        
-        public virtual  int Id 
+        string _Id;        
+        public virtual  string Id 
         {
             get
             {
@@ -35,12 +35,12 @@
 
         public void ClearDomainEvents()
         {
-            _domainEvents?.Clear();
+            //_domainEvents?.Clear();
         }
 
         public bool IsTransient()
         {
-            return this.Id == default(Int32);
+            return this.Id == string.Empty;
         }
 
         public override bool Equals(object obj)

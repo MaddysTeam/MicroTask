@@ -1,10 +1,11 @@
 ﻿using Chloe.Entity;
+using Common.DomainSeed;
 
-namespace Business
+namespace Domain
 {
 
     [Table("projects")]
-    public class Project
+    public class Project:IAggregateRoot
     {
         [Column("Id", IsPrimaryKey = true)]
         public string Id { get; set; }

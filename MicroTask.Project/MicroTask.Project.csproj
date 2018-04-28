@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Domain\Handlers\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 

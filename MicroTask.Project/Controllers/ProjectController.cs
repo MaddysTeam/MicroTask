@@ -1,6 +1,7 @@
 ﻿using Business;
 using Chloe.MySql;
 using Common;
+using Domain;
 using DotNetCore.CAP;
 using Infrastructure;
 using Microsoft.AspNetCore.Authorization;
@@ -110,12 +111,12 @@ namespace Controllers
             using (var trans = _capContext.Database.BeginTransaction())
             {
                 _serviceBus.Publish("xxx.project.check",
-                new Business.Project
+                new Domain.ProjectCreatedEvent
                 {
-                    Id = Guid.NewGuid().ToString(),
-                    Code = "1001",
-                    Name = "myPorject",
-                    OwnerId = "owner"
+                    //Id = Guid.NewGuid().ToString(),
+                    //Code = "1001",
+                    //Name = "myPorject",
+                    //OwnerId = "owner"
                 });
 
                 trans.Commit();

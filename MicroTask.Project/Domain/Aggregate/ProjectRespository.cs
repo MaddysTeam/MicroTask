@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Infrastructure;
 using System.Linq.Expressions;
 
-namespace Business
+namespace Domain
 {
 
     public class ProjectRespository : IProjectRespository
@@ -23,12 +23,12 @@ namespace Business
             throw new NotImplementedException();
         }
 
-        public List<Project> GetAll()
-        {
-            var q = context.Query<Project>();
+        //public List<Project> GetAll()
+        //{
+        //    var q = context.Query<Project>();
 
-            return q.ToList();
-        }
+        //    return q.ToList();
+        //}
 
         public Project GetById(string id)
         {

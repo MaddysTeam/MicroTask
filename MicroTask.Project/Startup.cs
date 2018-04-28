@@ -9,6 +9,7 @@ using Common.Loggers.Log4Net;
 using Infrastructure;
 using Business;
 using System;
+using Domain;
 
 namespace MicroTask.Project
 {

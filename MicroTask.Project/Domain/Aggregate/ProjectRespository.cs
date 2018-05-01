@@ -35,17 +35,20 @@ namespace Domain
             throw new NotImplementedException();
         }
 
-        public bool Insert(Project t)
+        public bool Insert(Project project)
         {
-            if (t.IsNull())
+            if (project.IsNull())
                 return false;
 
-            return !context.Insert(t).IsNull();
+            return !context.Insert(project).IsNull();
         }
 
-        public bool Update(Project t)
+        public bool Update(Project project)
         {
-            throw new NotImplementedException();
+            if (project.IsNull())
+                return false;
+
+            return context.Update(project) > 0;
         }
 
         public List<Project> Get(Expression<Func<Project, bool>> condition)

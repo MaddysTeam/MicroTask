@@ -9,7 +9,6 @@ namespace Domain
     public interface IRepository<T> where T : class
     {
         T GetById(string id);
-       // List<T> GetAll();
         List<T> Get(System.Linq.Expressions.Expression<Func<T,bool>> condition);
         bool Insert(T t);
         bool Update(T t);

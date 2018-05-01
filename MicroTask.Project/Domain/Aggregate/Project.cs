@@ -4,7 +4,7 @@ using Common.DomainSeed;
 namespace Domain
 {
 
-    [Table("projects")]
+    [Table("project")]
     public class Project:IAggregateRoot
     {
         [Column("Id", IsPrimaryKey = true)]

@@ -12,16 +12,23 @@ namespace Business
     {
         //private static object _queryLock;
 
-        public ProjectService(IProjectRespository repository, IRedisCache cache)
+        public ProjectService(IProjectRespository repository, IRedisCacheManager cache)
         {
             this.repository = repository;
+            this.cache = cache;
         }
 
-        public bool AddProject(Project p)
+        public bool AddProject(Project project)
         {
-            p.EnsureNotNull(() => { return new ProjectException(); });
+            project.EnsureNotNull(() => { return new ProjectException(); });
 
-            return repository.Insert(p);
+            var result = repository.Insert(project);
+            if (result)
+            {
+                cache.Set(project.Id, project); //强一致性的缓存更新
+            }
+
+            return result;
         }
 
         public List<Project> GetProjectByName(string name)
@@ -33,13 +40,13 @@ namespace Business
         {
             id.EnsureNotNull(() => { return new ProjectException(); });
 
-            var project = JsonConvert.DeserializeObject<Project>(cache.Get(id));
+            var project = cache.Get<Project>(id);
             if (project == null)
             {
                 var projects = repository.Get(p => p.Id == id);
                 project = projects.IsNull() ? null : projects.FirstOrDefault();
                 if (project != null)
-                    cache.Set(id, JsonConvert.SerializeObject(project)); //强一致性的缓存更新
+                    cache.Set(id, project); //强一致性的缓存更新
             }
 
             return project;
@@ -53,7 +60,7 @@ namespace Business
             var result = repository.Update(project);
             if (result)
             {
-                cache.Set(project.Id, JsonConvert.SerializeObject(project)); //强一致性的缓存更新
+                cache.Set(project.Id, project); //强一致性的缓存更新
             }
 
             return result;
@@ -69,7 +76,7 @@ namespace Business
         }
 
         private IProjectRespository repository;
-        private IRedisCache cache;
+        private IRedisCacheManager cache;
     }
 
 }

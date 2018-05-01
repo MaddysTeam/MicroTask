@@ -38,22 +38,13 @@ namespace Controllers
             _choleContext = choleContext;
         }
 
+
         // POST project/{id}
+
         [HttpGet]
-        [Authorize()]
+        //[Authorize()]
         [Route("{id}")]
         public Project GetProject(string id)
-        {
-            var project = _projectService.GetProjectById(id);
-
-            return project;
-        }
-
-
-        [HttpGet]
-        [Authorize()]
-        [Route("{id}")]
-        public Project GetProjects(string id,string managerId)
         {
             var project = _projectService.GetProjectById(id);
 

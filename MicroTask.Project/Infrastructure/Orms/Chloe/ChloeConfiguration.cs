@@ -20,4 +20,8 @@ namespace Infrastructure
 
     }
 
+    public interface IReadContext { }
+
+    public interface IWriteContext { }
+
 }

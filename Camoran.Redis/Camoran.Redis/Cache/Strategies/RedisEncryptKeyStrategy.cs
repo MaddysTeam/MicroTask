@@ -8,12 +8,12 @@ using System.Text.Encodings.Web;
 namespace Camoran.Redis.Cache
 {
 
-    public interface IRedisCacheStrategy<Key, Value>
+    public interface IRedisCacheStrategy
     {
-        void Set(Key key, Value val, TimeSpan? expireTime);
-        Value Get(Key key);
-        bool Remove(Key key);
-        void SetExpire(Key key, TimeSpan expireTime);
+        void Set<Value>(string key, Value val, TimeSpan? expireTime);
+        Value Get<Value>(string key);
+        bool Remove(string key);
+        void SetExpire(string key, TimeSpan expireTime);
         void SetConfig(RedisCacheConfiguration config);
     }
 
@@ -52,7 +52,7 @@ namespace Camoran.Redis.Cache
     }
 
 
-    public class RedisEncryptKeyStrategy<Value> : RedisEncrypt, IRedisCacheStrategy<string, Value>
+    public class RedisEncryptKeyStrategy:RedisEncrypt, IRedisCacheStrategy
     {
         RedisString _redisString;
         RedisKeys _redisKey;
@@ -65,14 +65,14 @@ namespace Camoran.Redis.Cache
             _redisKey = new RedisKeys();
         }
 
-        public Value Get(string key)
+        public Value Get<Value>(string key)
         {
             var enctryptKey = MD5Encrypt(key);
 
             return _redisString.Get<Value>(enctryptKey,db);
         }
 
-        public void Set(string key, Value val, TimeSpan? expireTime = null)
+        public void Set<Value>(string key, Value val, TimeSpan? expireTime = null)
         {
             if (val == null || string.IsNullOrEmpty(key)) return;
             if (_entryptType == EncryptType.MD5)
@@ -82,7 +82,7 @@ namespace Camoran.Redis.Cache
                 _redisString.Set(enctryptKey, val,db);
 
                 if (expireTime != null)
-                    SetExpire(key, expireTime.Value);
+                    SetExpire(enctryptKey, expireTime.Value);
             }
         }
 
